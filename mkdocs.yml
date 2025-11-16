@@ -1,0 +1,612 @@
+# MFitHou Documentation Site Configuration
+# Material for MkDocs - https://squidfunk.github.io/mkdocs-material/
+
+# ==============================================================================
+# Site Metadata
+# ==============================================================================
+site_name: MFitHou Documentation
+site_url: https://mfithou.github.io/MFitHou-Documents/
+site_description: >-
+  Tài liệu chính thức cho hệ sinh thái MFitHou - Nền tảng dữ liệu mở liên kết 
+  phục vụ nghiên cứu và chuyển đổi số. Bao gồm Data Pipeline, Backend API, 
+  Frontend Web App và hướng dẫn đầy đủ.
+site_author: MFitHou Team
+
+# Repository Information
+repo_url: https://github.com/MFitHou
+repo_name: MFitHou
+edit_uri: MFitHou-Documents/edit/main/docs/
+
+# Copyright
+copyright: >
+  Copyright &copy; 2025 <a href="https://github.com/MFitHou" target="_blank">MFitHou</a> - 
+  OLP PMNM 2025<br>
+  Licensed under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">GNU GPL v3.0</a>
+
+# ==============================================================================
+# Theme Configuration
+# ==============================================================================
+theme:
+  name: material
+  language: vi
+  custom_dir: overrides
+  
+  # Color Palette
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Chuyển sang chế độ tối
+    
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Chuyển sang chế độ sáng
+  
+  # Fonts
+  font:
+    text: Roboto
+    code: Roboto Mono
+  
+  # Logo and Favicon (Uncomment when files are ready)
+  # logo: assets/images/logo.png
+  # favicon: assets/images/favicon.ico
+  
+  # Icons
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil
+    view: material/eye
+    admonition:
+      note: octicons/tag-16
+      abstract: octicons/checklist-16
+      info: octicons/info-16
+      tip: octicons/squirrel-16
+      success: octicons/check-16
+      question: octicons/question-16
+      warning: octicons/alert-16
+      failure: octicons/x-circle-16
+      danger: octicons/zap-16
+      bug: octicons/bug-16
+      example: octicons/beaker-16
+      quote: octicons/quote-16
+  
+  # Features
+  features:
+    # Navigation
+    - navigation.instant          # Instant loading (SPA-like)
+    - navigation.instant.progress # Show progress indicator
+    - navigation.tracking         # URL tracking
+    - navigation.tabs             # Top-level tabs
+    - navigation.tabs.sticky      # Sticky tabs
+    - navigation.sections         # Section navigation
+    - navigation.expand           # Expand all sections by default
+    - navigation.path             # Show breadcrumb path
+    - navigation.indexes          # Section index pages
+    - navigation.top              # Back to top button
+    - navigation.footer           # Previous/next links in footer
+    
+    # Table of Contents
+    - toc.follow                  # TOC follows scroll
+    - toc.integrate               # TOC integrated in navigation
+    
+    # Search
+    - search.suggest              # Search suggestions
+    - search.highlight            # Highlight search results
+    - search.share                # Share search results
+    
+    # Header
+    - header.autohide             # Auto-hide header on scroll
+    
+    # Content
+    - content.code.copy           # Copy code button
+    - content.code.annotate       # Code annotations
+    - content.tabs.link           # Link content tabs
+    - content.tooltips            # Improved tooltips
+    - content.action.edit         # Edit this page button
+    - content.action.view         # View source button
+    
+    # Announcements
+    - announce.dismiss            # Dismissible announcements
+
+# ==============================================================================
+# Plugins
+# ==============================================================================
+plugins:
+  # Search
+  - search:
+      lang:
+        - vi
+        - en
+      separator: '[\s\-\.,;:!?\[\]\(\)\/]+'
+      pipeline:
+        - stemmer
+        - stopWordFilter
+        - trimmer
+  
+  # Tags
+  - tags:
+      tags_file: tags.md
+  
+  # Git Revision Date
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: timeago
+      fallback_to_build_date: true
+      locale: vi
+  
+  # Minify HTML/CSS/JS
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+        remove_comments: true
+      cache_safe: true
+  
+  # Image Lightbox
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      slide_effect: slide
+      width: 100%
+      height: auto
+      zoomable: true
+      draggable: true
+      skip_classes:
+        - skip-lightbox
+
+# ==============================================================================
+# Markdown Extensions
+# ==============================================================================
+markdown_extensions:
+  # Python Markdown
+  - abbr                          # Abbreviations
+  - admonition                    # Admonition boxes
+  - attr_list                     # Attribute lists
+  - def_list                      # Definition lists
+  - footnotes                     # Footnotes
+  - md_in_html                    # Markdown in HTML
+  - toc:
+      permalink: true
+      permalink_title: Liên kết cố định đến tiêu đề này
+      title: Nội dung trang
+      toc_depth: 3
+  
+  # PyMdown Extensions
+  - pymdownx.arithmatex:          # LaTeX math
+      generic: true
+  
+  - pymdownx.betterem:            # Better emphasis
+      smart_enable: all
+  
+  - pymdownx.caret                # Insert and superscript
+  - pymdownx.mark                 # Highlight
+  - pymdownx.tilde                # Delete and subscript
+  
+  - pymdownx.details              # Collapsible admonitions
+  
+  - pymdownx.emoji:               # Emojis
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  
+  - pymdownx.highlight:           # Code highlighting
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+      auto_title: true
+      linenums: true
+      linenums_style: pymdownx-inline
+  
+  - pymdownx.inlinehilite         # Inline code highlighting
+  - pymdownx.keys                 # Keyboard keys
+  - pymdownx.smartsymbols         # Smart symbols
+  
+  - pymdownx.snippets:            # Snippets
+      check_paths: true
+      base_path:
+        - docs
+  
+  - pymdownx.superfences:         # Nested code blocks
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  
+  - pymdownx.tabbed:              # Tabbed content
+      alternate_style: true
+      combine_header_slug: true
+  
+  - pymdownx.tasklist:            # Task lists
+      custom_checkbox: true
+      clickable_checkbox: false
+
+# ==============================================================================
+# Extra CSS and JavaScript
+# ==============================================================================
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/extra.js
+  # MathJax for LaTeX
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+# ==============================================================================
+# Extra Configuration
+# ==============================================================================
+extra:
+  # Social Links
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/MFitHou
+      name: MFitHou trên GitHub
+    
+    - icon: fontawesome/brands/python
+      link: https://github.com/MFitHou/OpenDataFitHou
+      name: Data Pipeline Repository
+    
+    - icon: fontawesome/solid/server
+      link: https://github.com/MFitHou/open_data_backend
+      name: Backend API Repository
+    
+    - icon: fontawesome/solid/map
+      link: https://github.com/MFitHou/open_data_map
+      name: Frontend Web Repository
+    
+    - icon: fontawesome/solid/book
+      link: https://vfossa.vn/tin-tuc/gioi-thieu-chu-de-cuoc-thi-phan-mem-nguon-mo-olp-2025-746.html
+      name: OLP PMNM 2025
+  
+  # Analytics (Optional - configure in GitHub Secrets)
+  analytics:
+    provider: google
+    property: !ENV [GOOGLE_ANALYTICS_KEY, ""]
+    feedback:
+      title: Trang này có hữu ích không?
+      ratings:
+        - icon: material/thumb-up-outline
+          name: Hữu ích
+          data: 1
+          note: >
+            Cảm ơn phản hồi của bạn! Chúng tôi rất vui vì tài liệu này hữu ích.
+        - icon: material/thumb-down-outline
+          name: Cần cải thiện
+          data: 0
+          note: >
+            Cảm ơn phản hồi! Hãy cho chúng tôi biết cách cải thiện trang này.
+  
+  # Versioning (using mike)
+  version:
+    provider: mike
+    default: latest
+    alias: true
+  
+  # Consent (GDPR)
+  consent:
+    title: Thông báo về Cookie
+    description: >-
+      Chúng tôi sử dụng cookies để cải thiện trải nghiệm của bạn và phân tích 
+      lưu lượng truy cập trang web. Bằng cách sử dụng trang web này, bạn đồng ý 
+      với việc sử dụng cookies.
+    actions:
+      - accept
+      - reject
+      - manage
+
+# ==============================================================================
+# Navigation Structure
+# ==============================================================================
+nav:
+  # ============================================================================
+  # Home
+  # ============================================================================
+  - Trang Chủ: index.md
+  
+  # ============================================================================
+  # Getting Started
+  # ============================================================================
+  - Bắt đầu:
+    - getting-started/index.md
+    - Giới thiệu: getting-started/introduction.md
+    - Tính năng: getting-started/features.md
+    - Quick Start: getting-started/quick-start.md
+    - Yêu cầu hệ thống: getting-started/system-requirements.md
+    - Kiến trúc tổng quan: getting-started/architecture-overview.md
+  
+  # ============================================================================
+  # System Architecture
+  # ============================================================================
+  - Kiến trúc hệ thống:
+    - architecture/index.md
+    - Tổng quan: architecture/system-overview.md
+    - Component Diagram: architecture/component-diagram.md
+    - Data Flow: architecture/data-flow.md
+    - Technology Stack: architecture/technology-stack.md
+    - Infrastructure: architecture/infrastructure.md
+    - Deployment: architecture/deployment.md
+  
+  # ============================================================================
+  # Components
+  # ============================================================================
+  - Components:
+    - components/index.md
+    
+    # Data Pipeline (OpenDataFitHou)
+    - Data Pipeline:
+      - components/data-pipeline/index.md
+      - Overview: components/data-pipeline/overview.md
+      - Thu thập dữ liệu: components/data-pipeline/data-collection.md
+      - Chuyển đổi dữ liệu: components/data-pipeline/data-transformation.md
+      - RDF Generation: components/data-pipeline/rdf-generation.md
+      - Upload Fuseki: components/data-pipeline/fuseki-upload.md
+      - Jupyter Notebooks: components/data-pipeline/notebooks-guide.md
+    
+    # Backend API (open_data_backend)
+    - Backend API:
+      - components/backend/index.md
+      - Overview: components/backend/overview.md
+      - Architecture: components/backend/architecture.md
+      - Modules: components/backend/modules.md
+      - Services: components/backend/services.md
+      - Controllers: components/backend/controllers.md
+      - Fuseki Integration: components/backend/fuseki-integration.md
+      - API Endpoints: components/backend/api-endpoints.md
+      - Error Handling: components/backend/error-handling.md
+      - Configuration: components/backend/configuration.md
+    
+    # Frontend Web (open_data_map)
+    - Frontend Web:
+      - components/frontend/index.md
+      - Overview: components/frontend/overview.md
+      - Architecture: components/frontend/architecture.md
+      - Pages & Routes: components/frontend/pages.md
+      - Components: components/frontend/components.md
+      - Custom Hooks: components/frontend/hooks.md
+      - State Management: components/frontend/state-management.md
+      - API Integration: components/frontend/api-integration.md
+      - Map Integration: components/frontend/map-integration.md
+      - Styling: components/frontend/styling.md
+  
+  # ============================================================================
+  # Installation Guides
+  # ============================================================================
+  - Hướng dẫn cài đặt:
+    - installation/index.md
+    - Yêu cầu ban đầu: installation/prerequisites.md
+    
+    # Data Pipeline Installation
+    - Data Pipeline:
+      - installation/data-pipeline/index.md
+      - Python Setup: installation/data-pipeline/python-setup.md
+      - Dependencies: installation/data-pipeline/dependencies.md
+      - Configuration: installation/data-pipeline/configuration.md
+      - Running: installation/data-pipeline/running.md
+    
+    # Backend API Installation
+    - Backend API:
+      - installation/backend/index.md
+      - Node.js Setup: installation/backend/nodejs-setup.md
+      - Dependencies: installation/backend/dependencies.md
+      - Environment Variables: installation/backend/environment-variables.md
+      - Running Server: installation/backend/running-server.md
+    
+    # Frontend Installation
+    - Frontend Web:
+      - installation/frontend/index.md
+      - Node.js Setup: installation/frontend/nodejs-setup.md
+      - Dependencies: installation/frontend/dependencies.md
+      - Environment Variables: installation/frontend/environment-variables.md
+      - Development Server: installation/frontend/development-server.md
+    
+    # Fuseki Installation
+    - Apache Jena Fuseki:
+      - installation/fuseki/index.md
+      - Download & Install: installation/fuseki/download-install.md
+      - Dataset Creation: installation/fuseki/dataset-creation.md
+      - Configuration: installation/fuseki/configuration.md
+      - Data Upload: installation/fuseki/data-upload.md
+    
+    # Docker Deployment
+    - Docker Deployment:
+      - installation/docker/index.md
+      - Docker Compose: installation/docker/docker-compose.md
+      - Configuration: installation/docker/configuration.md
+      - Production: installation/docker/production-deployment.md
+  
+  # ============================================================================
+  # User Guide
+  # ============================================================================
+  - Hướng dẫn sử dụng:
+    - user-guide/index.md
+    - Tìm kiếm địa điểm: user-guide/searching-locations.md
+    - Xem bản đồ: user-guide/viewing-map.md
+    - Dịch vụ lân cận: user-guide/nearby-services.md
+    - SPARQL Queries: user-guide/sparql-queries.md
+    - Xuất dữ liệu: user-guide/data-export.md
+    - Chatbot AI: user-guide/chatbot.md
+    - Xử lý lỗi: user-guide/troubleshooting.md
+  
+  # ============================================================================
+  # Developer Guide
+  # ============================================================================
+  - Hướng dẫn phát triển:
+    - developer-guide/index.md
+    - Cấu trúc dự án: developer-guide/project-structure.md
+    - Development Setup: developer-guide/development-setup.md
+    
+    # Coding Standards
+    - Coding Standards:
+      - developer-guide/coding-standards/index.md
+      - TypeScript: developer-guide/coding-standards/typescript.md
+      - Python: developer-guide/coding-standards/python.md
+      - Naming Conventions: developer-guide/coding-standards/naming-conventions.md
+      - Commit Messages: developer-guide/coding-standards/commit-messages.md
+    
+    # Testing
+    - Testing:
+      - developer-guide/testing/index.md
+      - Unit Tests: developer-guide/testing/unit-tests.md
+      - Integration Tests: developer-guide/testing/integration-tests.md
+      - E2E Tests: developer-guide/testing/e2e-tests.md
+    
+    # Git Workflow
+    - Git Workflow:
+      - developer-guide/git-workflow/index.md
+      - Branching Strategy: developer-guide/git-workflow/branching-strategy.md
+      - Pull Requests: developer-guide/git-workflow/pull-requests.md
+      - Code Review: developer-guide/git-workflow/code-review.md
+    
+    - Contributing: developer-guide/contributing.md
+  
+  # ============================================================================
+  # API Reference
+  # ============================================================================
+  - API Reference:
+    - api-reference/index.md
+    
+    # REST API
+    - REST API:
+      - api-reference/rest-api/index.md
+      - Overview: api-reference/rest-api/overview.md
+      - Authentication: api-reference/rest-api/authentication.md
+      
+      # Endpoints
+      - Endpoints:
+        - api-reference/rest-api/endpoints/index.md
+        - ATMs Nearby: api-reference/rest-api/endpoints/atms-nearby.md
+        - Hospitals Nearby: api-reference/rest-api/endpoints/hospitals-nearby.md
+        - Toilets Nearby: api-reference/rest-api/endpoints/toilets-nearby.md
+        - Bus Stops Nearby: api-reference/rest-api/endpoints/bus-stops-nearby.md
+        - Playgrounds Nearby: api-reference/rest-api/endpoints/playgrounds-nearby.md
+        - Custom Query: api-reference/rest-api/endpoints/custom-query.md
+      
+      - Request/Response: api-reference/rest-api/request-response.md
+      - Error Codes: api-reference/rest-api/error-codes.md
+      - Examples: api-reference/rest-api/examples.md
+    
+    # SPARQL
+    - SPARQL:
+      - api-reference/sparql/index.md
+      - Overview: api-reference/sparql/overview.md
+      - Common Queries: api-reference/sparql/common-queries.md
+      - Query Cookbook: api-reference/sparql/query-cookbook.md
+      - Best Practices: api-reference/sparql/best-practices.md
+  
+  # ============================================================================
+  # Data & RDF
+  # ============================================================================
+  - Data & RDF:
+    - data-rdf/index.md
+    
+    # Ontology
+    - Ontology:
+      - data-rdf/ontology/index.md
+      - Schema Overview: data-rdf/ontology/schema-overview.md
+      - Classes: data-rdf/ontology/classes.md
+      - Properties: data-rdf/ontology/properties.md
+      - Relationships: data-rdf/ontology/relationships.md
+    
+    # Data Sources
+    - Data Sources:
+      - data-rdf/data-sources/index.md
+      - OpenStreetMap: data-rdf/data-sources/openstreetmap.md
+      - Wikidata: data-rdf/data-sources/wikidata.md
+      - Data Quality: data-rdf/data-sources/data-quality.md
+    
+    # POI Types
+    - POI Types:
+      - data-rdf/poi-types/index.md
+      - ATMs: data-rdf/poi-types/atms.md
+      - Hospitals: data-rdf/poi-types/hospitals.md
+      - Bus Stops: data-rdf/poi-types/bus-stops.md
+      - Toilets: data-rdf/poi-types/toilets.md
+      - Playgrounds: data-rdf/poi-types/playgrounds.md
+      - Schools: data-rdf/poi-types/schools.md
+    
+    # RDF Structure
+    - RDF Structure:
+      - data-rdf/rdf-structure/index.md
+      - Prefixes: data-rdf/rdf-structure/prefixes.md
+      - Triple Patterns: data-rdf/rdf-structure/triple-patterns.md
+      - Example Data: data-rdf/rdf-structure/example-data.md
+  
+  # ============================================================================
+  # CI/CD & Infrastructure
+  # ============================================================================
+  - CI/CD & Infrastructure:
+    - infrastructure/index.md
+    
+    # GitHub Workflows
+    - GitHub Workflows:
+      - infrastructure/github-workflows/index.md
+      - Backend CI: infrastructure/github-workflows/backend-ci.md
+      - Frontend CI: infrastructure/github-workflows/frontend-ci.md
+      - Data Validation: infrastructure/github-workflows/data-pipeline-validation.md
+      - Docs Deployment: infrastructure/github-workflows/docs-deployment.md
+    
+    # Templates
+    - Templates:
+      - infrastructure/templates/index.md
+      - Issue Templates: infrastructure/templates/issue-templates.md
+      - PR Templates: infrastructure/templates/pr-templates.md
+    
+    - Release Management: infrastructure/release-management.md
+  
+  # ============================================================================
+  # Policies
+  # ============================================================================
+  - Chính sách:
+    - policies/index.md
+    - License (GPL v3): policies/license.md
+    - Code of Conduct: policies/code-of-conduct.md
+    - Security Policy: policies/security.md
+    - Privacy Policy: policies/privacy.md
+    - Contributing: policies/contributing.md
+  
+  # ============================================================================
+  # Releases
+  # ============================================================================
+  - Releases:
+    - releases/index.md
+    - Changelog: releases/changelog.md
+    - Version History: releases/version-history.md
+    - Migration Guides: 
+      - releases/migration-guides/index.md
+    - Roadmap: releases/roadmap.md
+  
+  # ============================================================================
+  # FAQ & Support
+  # ============================================================================
+  - FAQ: faq.md
+  - Support: support.md
+
+# ==============================================================================
+# Validation
+# ==============================================================================
+validation:
+  nav:
+    omitted_files: warn
+    not_found: warn
+    absolute_links: warn
+  links:
+    not_found: warn
+    absolute_links: warn
+    unrecognized_links: warn
+
+# ==============================================================================
+# Watch (Development)
+# ==============================================================================
+watch:
+  - overrides
+  - docs
