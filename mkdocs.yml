@@ -133,8 +133,7 @@ plugins:
         - trimmer
   
   # Tags
-  - tags:
-      tags_file: tags.md
+  - tags
   
   # Git Revision Date
   - git-revision-date-localized:
