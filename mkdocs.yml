@@ -1,3 +1,18 @@
+# Copyright (C) 2025 MFitHou
+# 
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <https://www.gnu.org/licenses/>.
+
 # MFitHou Documentation Site Configuration
 # Material for MkDocs - https://squidfunk.github.io/mkdocs-material/
 
@@ -8,8 +23,7 @@ site_name: MFitHou Documentation
 site_url: https://mfithou.github.io/MFitHou-Documents/
 site_description: >-
   Tài liệu chính thức cho hệ sinh thái MFitHou - Nền tảng dữ liệu mở liên kết 
-  phục vụ nghiên cứu và chuyển đổi số. Bao gồm Data Pipeline, Backend API, 
-  Frontend Web App và hướng dẫn đầy đủ.
+  phục vụ nghiên cứu và chuyển đổi số. 
 site_author: MFitHou Team
 
 # Repository Information
@@ -93,7 +107,14 @@ theme:
     - navigation.indexes          # Section index pages
     - navigation.top              # Back to top button
     - navigation.footer           # Previous/next links in footer
-    
+    - navigation.sticky           # Sticky navigation
+
+  # Customization for sticky navigation
+  header:
+    logo: assets/images/logo.png  # Path to the logo file
+    title: MFitHou Documentation  # App name to display
+    autohide: false               # Ensure header remains visible
+
     # Table of Contents
     - toc.follow                  # TOC follows scroll
     - toc.integrate               # TOC integrated in navigation
