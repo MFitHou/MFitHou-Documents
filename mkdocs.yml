@@ -32,10 +32,7 @@ repo_name: MFitHou
 edit_uri: MFitHou-Documents/edit/main/docs/
 
 # Copyright
-copyright: >
-  Copyright &copy; 2025 <a href="https://github.com/MFitHou" target="_blank">MFitHou</a> - 
-  OLP PMNM 2025<br>
-  Licensed under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">GNU GPL v3.0</a>
+copyright: Copyright &copy; 2025 <a href="https://github.com/MFitHou" target="_blank" rel="noopener">MFitHou</a> - OLP PMNM 2025
 
 # ==============================================================================
 # Theme Configuration
@@ -43,286 +40,87 @@ copyright: >
 theme:
   name: material
   language: vi
-  custom_dir: overrides
+  logo: assets/images/logo.png
   
-  # Color Palette
-  palette:
-    # Light mode
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: indigo
-      accent: blue
-      toggle:
-        icon: material/brightness-7
-        name: Chuyển sang chế độ tối
-    
-    # Dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: indigo
-      accent: blue
-      toggle:
-        icon: material/brightness-4
-        name: Chuyển sang chế độ sáng
+  # Icons
+  icon:
+    repo: fontawesome/brands/git-alt
   
   # Fonts
   font:
     text: Roboto
     code: Roboto Mono
   
-  # Logo and Favicon (Uncomment when files are ready)
-  # logo: assets/images/logo.png
-  # favicon: assets/images/favicon.ico
-  
-  # Icons
-  icon:
-    repo: fontawesome/brands/github
-    edit: material/pencil
-    view: material/eye
-    admonition:
-      note: octicons/tag-16
-      abstract: octicons/checklist-16
-      info: octicons/info-16
-      tip: octicons/squirrel-16
-      success: octicons/check-16
-      question: octicons/question-16
-      warning: octicons/alert-16
-      failure: octicons/x-circle-16
-      danger: octicons/zap-16
-      bug: octicons/bug-16
-      example: octicons/beaker-16
-      quote: octicons/quote-16
+  # Color Palette
+  palette:
+    # Dark mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Dark mode
+      primary: blue
+      accent: blue
+    
+    # Light mode
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Light mode
+      primary: blue
+      accent: blue
   
   # Features
   features:
-    # Navigation
-    - navigation.instant          # Instant loading (SPA-like)
-    - navigation.instant.progress # Show progress indicator
-    - navigation.tracking         # URL tracking
-    - navigation.tabs             # Top-level tabs
-    - navigation.tabs.sticky      # Sticky tabs
-    - navigation.sections         # Section navigation
-    - navigation.expand           # Expand all sections by default
-    - navigation.path             # Show breadcrumb path
-    - navigation.indexes          # Section index pages
-    - navigation.top              # Back to top button
-    - navigation.footer           # Previous/next links in footer
-    - navigation.sticky           # Sticky navigation
-
-  # Customization for sticky navigation
-  header:
-    logo: assets/images/logo.png  # Path to the logo file
-    title: MFitHou Documentation  # App name to display
-    autohide: false               # Ensure header remains visible
-
-    # Table of Contents
-    - toc.follow                  # TOC follows scroll
-    - toc.integrate               # TOC integrated in navigation
-    
-    # Search
-    - search.suggest              # Search suggestions
-    - search.highlight            # Highlight search results
-    - search.share                # Share search results
-    
-    # Header
-    - header.autohide             # Auto-hide header on scroll
-    
-    # Content
-    - content.code.copy           # Copy code button
-    - content.code.annotate       # Code annotations
-    - content.tabs.link           # Link content tabs
-    - content.tooltips            # Improved tooltips
-    - content.action.edit         # Edit this page button
-    - content.action.view         # View source button
-    
-    # Announcements
-    - announce.dismiss            # Dismissible announcements
+    - navigation.footer
+    - navigation.tabs
+    - navigation.top
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.instant.prefetch
+    - navigation.expand
+    - navigation.path
+    - navigation.indexes
+    - toc.integrate
+    - content.tabs.link
+    - content.code.annotate
+    - search.suggest
+    - search.highlight
+    - search.share
 
 # ==============================================================================
 # Plugins
 # ==============================================================================
 plugins:
-  # Search
-  - search:
-      lang:
-        - vi
-        - en
-      separator: '[\s\-\.,;:!?\[\]\(\)\/]+'
-      pipeline:
-        - stemmer
-        - stopWordFilter
-        - trimmer
-  
-  # Tags
-  - tags
-  
-  # Git Revision Date
-  - git-revision-date-localized:
-      enable_creation_date: true
-      type: timeago
-      fallback_to_build_date: true
-      locale: vi
-  
-  # Minify HTML/CSS/JS
-  - minify:
-      minify_html: true
-      minify_js: true
-      minify_css: true
-      htmlmin_opts:
-        remove_comments: true
-      cache_safe: true
-  
-  # Image Lightbox
-  - glightbox:
-      touchNavigation: true
-      loop: false
-      effect: zoom
-      slide_effect: slide
-      width: 100%
-      height: auto
-      zoomable: true
-      draggable: true
-      skip_classes:
-        - skip-lightbox
+  - glightbox
+  - search
 
 # ==============================================================================
 # Markdown Extensions
 # ==============================================================================
 markdown_extensions:
-  # Python Markdown
-  - abbr                          # Abbreviations
-  - admonition                    # Admonition boxes
-  - attr_list                     # Attribute lists
-  - def_list                      # Definition lists
-  - footnotes                     # Footnotes
-  - md_in_html                    # Markdown in HTML
-  - toc:
-      permalink: true
-      permalink_title: Liên kết cố định đến tiêu đề này
-      title: Nội dung trang
-      toc_depth: 3
-  
-  # PyMdown Extensions
-  - pymdownx.arithmatex:          # LaTeX math
-      generic: true
-  
-  - pymdownx.betterem:            # Better emphasis
-      smart_enable: all
-  
-  - pymdownx.caret                # Insert and superscript
-  - pymdownx.mark                 # Highlight
-  - pymdownx.tilde                # Delete and subscript
-  
-  - pymdownx.details              # Collapsible admonitions
-  
-  - pymdownx.emoji:               # Emojis
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.blocks.caption
+  - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  
-  - pymdownx.highlight:           # Code highlighting
+  - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
-      auto_title: true
-      linenums: true
-      linenums_style: pymdownx-inline
-  
-  - pymdownx.inlinehilite         # Inline code highlighting
-  - pymdownx.keys                 # Keyboard keys
-  - pymdownx.smartsymbols         # Smart symbols
-  
-  - pymdownx.snippets:            # Snippets
-      check_paths: true
-      base_path:
-        - docs
-  
-  - pymdownx.superfences:         # Nested code blocks
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
-  
-  - pymdownx.tabbed:              # Tabbed content
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
       alternate_style: true
-      combine_header_slug: true
-  
-  - pymdownx.tasklist:            # Task lists
-      custom_checkbox: true
-      clickable_checkbox: false
 
 # ==============================================================================
-# Extra CSS and JavaScript
+# Extra CSS
 # ==============================================================================
 extra_css:
   - stylesheets/extra.css
-
-extra_javascript:
-  - javascripts/extra.js
-  # MathJax for LaTeX
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-
-# ==============================================================================
-# Extra Configuration
-# ==============================================================================
-extra:
-  # Social Links
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/MFitHou
-      name: MFitHou trên GitHub
-    
-    - icon: fontawesome/brands/python
-      link: https://github.com/MFitHou/OpenDataFitHou
-      name: Data Pipeline Repository
-    
-    - icon: fontawesome/solid/server
-      link: https://github.com/MFitHou/open_data_backend
-      name: Backend API Repository
-    
-    - icon: fontawesome/solid/map
-      link: https://github.com/MFitHou/open_data_map
-      name: Frontend Web Repository
-    
-    - icon: fontawesome/solid/book
-      link: https://vfossa.vn/tin-tuc/gioi-thieu-chu-de-cuoc-thi-phan-mem-nguon-mo-olp-2025-746.html
-      name: OLP PMNM 2025
-  
-  # Analytics (Optional - configure in GitHub Secrets)
-  analytics:
-    provider: google
-    property: !ENV [GOOGLE_ANALYTICS_KEY, ""]
-    feedback:
-      title: Trang này có hữu ích không?
-      ratings:
-        - icon: material/thumb-up-outline
-          name: Hữu ích
-          data: 1
-          note: >
-            Cảm ơn phản hồi của bạn! Chúng tôi rất vui vì tài liệu này hữu ích.
-        - icon: material/thumb-down-outline
-          name: Cần cải thiện
-          data: 0
-          note: >
-            Cảm ơn phản hồi! Hãy cho chúng tôi biết cách cải thiện trang này.
-  
-  # Versioning (using mike)
-  version:
-    provider: mike
-    default: latest
-    alias: true
-  
-  # Consent (GDPR)
-  consent:
-    title: Thông báo về Cookie
-    description: >-
-      Chúng tôi sử dụng cookies để cải thiện trải nghiệm của bạn và phân tích 
-      lưu lượng truy cập trang web. Bằng cách sử dụng trang web này, bạn đồng ý 
-      với việc sử dụng cookies.
-    actions:
-      - accept
-      - reject
-      - manage
 
 # ==============================================================================
 # Navigation Structure
@@ -343,6 +141,8 @@ nav:
     - Quick Start: getting-started/quick-start.md
     - Yêu cầu hệ thống: getting-started/system-requirements.md
     - Kiến trúc tổng quan: getting-started/architecture-overview.md
+    - Cài đặt nhanh: getting-started/quick-start.md
+    - Khái niệm cơ bản: getting-started/concepts.md
   
   # ============================================================================
   # System Architecture
@@ -355,6 +155,8 @@ nav:
     - Technology Stack: architecture/technology-stack.md
     - Infrastructure: architecture/infrastructure.md
     - Deployment: architecture/deployment.md
+    - Bảo mật: architecture/security.md
+    - Khả năng mở rộng: architecture/scalability.md
   
   # ============================================================================
   # Components
@@ -456,6 +258,7 @@ nav:
     - Xuất dữ liệu: user-guide/data-export.md
     - Chatbot AI: user-guide/chatbot.md
     - Xử lý lỗi: user-guide/troubleshooting.md
+    - FAQ: user-guide/faq.md
   
   # ============================================================================
   # Developer Guide
@@ -488,6 +291,8 @@ nav:
       - Code Review: developer-guide/git-workflow/code-review.md
     
     - Contributing: developer-guide/contributing.md
+    - Code Style: developer-guide/code-style.md
+    - Testing: developer-guide/testing.md
   
   # ============================================================================
   # API Reference
@@ -611,22 +416,10 @@ nav:
   - FAQ: faq.md
   - Support: support.md
 
-# ==============================================================================
-# Validation
-# ==============================================================================
-validation:
-  nav:
-    omitted_files: warn
-    not_found: warn
-    absolute_links: warn
-  links:
-    not_found: warn
-    absolute_links: warn
-    unrecognized_links: warn
-
-# ==============================================================================
-# Watch (Development)
-# ==============================================================================
 watch:
   - overrides
   - docs
+  - mkdocs.yml
+  - docs/stylesheets
+  - docs/javascripts
+
