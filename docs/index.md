@@ -133,19 +133,8 @@ MFitHou là hệ sinh thái dữ liệu mở liên kết (Linked Open Data) ph�
     - **RDFLib** - RDF/Turtle generation
     - **Requests** - HTTP client
 
-=== "DevOps"
-    - **Docker** - Containerization
-    - **GitHub Actions** - CI/CD
-    - **Nginx** - Web server
-    - **PM2** - Process manager
-
 ---
 
-
-!!! tip "Hướng dẫn chi tiết"
-    [:octicons-arrow-right-24: Xem hướng dẫn cài đặt đầy đủ](installation/index.md)
-
----
 
 ## :material-account-group: Đội ngũ phát triển
 
