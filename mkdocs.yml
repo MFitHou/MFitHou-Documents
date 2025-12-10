@@ -129,8 +129,6 @@ nav:
   - OpenDataMap:
     - getting-started/index.md
     - Giới thiệu: getting-started/introduction.md
-    - Tính năng: getting-started/features.md
-    - Yêu cầu hệ thống: getting-started/system-requirements.md
     - Kiến trúc tổng quan: getting-started/architecture-overview.md
   
   # ============================================================================

@@ -144,19 +144,15 @@ MFitHou là hệ sinh thái dữ liệu mở liên kết (Linked Open Data) ph�
     
     ---
     
-    Team Lead & Backend Developer
-
 -   :material-github: **[@VuHoangAnh2110](https://github.com/VuHoangAnh2110)**
     
     ---
     
-    Frontend Developer & UI/UX Designer
 
 -   :material-github: **[@VNgKhanh04](https://github.com/VNgKhanh04)**
     
     ---
     
-    Data Engineer & DevOps
 
 </div>
 
