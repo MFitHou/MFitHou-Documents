@@ -1,0 +1,2020 @@
+<!DOCTYPE html><html lang="vi" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Tài liệu chính thức cho hệ sinh thái MFitHou - Nền tảng dữ liệu mở liên kết  phục vụ nghiên cứu và chuyển đổi số. ">
+      
+      
+        <meta name="author" content="MFitHou Team">
+      
+      
+        <link rel="canonical" href="https://mfithou.github.io/MFitHou-Documents/policies/source-code-license/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../open-data-license/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Giấy phép Mã nguồn - MFitHou Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#giay-phep-ma-nguon-gnu-gpl-v30" class="md-skip">
+          Bỏ qua
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Đầu trang">
+    <a href="../.." title="MFitHou Documentation" class="md-header__button md-logo" aria-label="MFitHou Documentation" data-md-component="logo">
+      
+  <img src="../../assets/images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MFitHou Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Giấy phép Mã nguồn
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Tìm kiếm" placeholder="Tìm kiếm" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Tìm kiếm">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Chia sẻ" aria-label="Chia sẻ" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Xoá" aria-label="Xoá" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/MFitHou" title="Xem mã nguồn" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    MFitHou
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Trang Chủ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../getting-started/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  OpenDataMap
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../getting-started/installation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Hướng dẫn cài đặt
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../user-guide/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Hướng dẫn sử dụng
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../developer-guide/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Hướng dẫn phát triển
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../api-reference/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  API Reference
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../data-rdf/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Data &amp; RDF
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Chính sách &amp; Giấy phép
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Thanh điều hướng" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="MFitHou Documentation" class="md-nav__button md-logo" aria-label="MFitHou Documentation" data-md-component="logo">
+      
+  <img src="../../assets/images/logo.png" alt="logo">
+
+    </a>
+    MFitHou Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/MFitHou" title="Xem mã nguồn" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    MFitHou
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trang Chủ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../getting-started/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OpenDataMap
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    OpenDataMap
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Giới thiệu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tính năng
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/system-requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Yêu cầu hệ thống
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/architecture-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kiến trúc tổng quan
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hướng dẫn cài đặt
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hướng dẫn sử dụng
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developer-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hướng dẫn phát triển
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-rdf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data &amp; RDF
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chính sách &amp; Giấy phép
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Chính sách &amp; Giấy phép
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Giấy phép Mã nguồn
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Giấy phép Mã nguồn
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Mục lục">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Mục lục
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tong-quan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tổng quan
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cac-thanh-phan-ap-dung-gpl-30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Các thành phần áp dụng GPL-3.0
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quyen-loi-cua-ban" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quyền lợi của bạn
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quyền lợi của bạn">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tu-do-su-dung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Tự do sử dụng
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tu-do-nghien-cuu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Tự do nghiên cứu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tu-do-chinh-sua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Tự do chỉnh sửa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tu-do-phan-phoi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Tự do phân phối
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bao-ve-bang-sang-che" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Bảo vệ bằng sáng chế
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nghia-vu-cua-ban" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nghĩa vụ của bạn
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Nghĩa vụ của bạn">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cong-khai-ma-nguon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❗ Công khai mã nguồn
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#giu-nguyen-giay-phep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❗ Giữ nguyên giấy phép
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thong-bao-ban-quyen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❗ Thông báo bản quyền
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ghi-ro-thay-oi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❗ Ghi rõ thay đổi
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bao-gom-license-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❗ Bao gồm LICENSE file
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tinh-huong-su-dung-cu-the" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tình huống sử dụng cụ thể
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tình huống sử dụng cụ thể">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uoc-phep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Được phép
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#khong-uoc-phep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❌ Không được phép
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gpl-30-vs-cac-giay-phep-khac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GPL-3.0 vs Các giấy phép khác
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ac-iem-noi-bat-cua-gpl-30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Đặc điểm nổi bật của GPL-3.0
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Đặc điểm nổi bật của GPL-3.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-copyleft-manh-me" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Copyleft mạnh mẽ
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-chong-tivoization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Chống Tivoization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-bao-ve-bang-sang-che" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Bảo vệ bằng sáng chế
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-tuong-thich-voi-agpl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Tương thích với AGPL
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kich-ban-thuc-te" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kịch bản thực tế
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kịch bản thực tế">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kich-ban-1-startup-muon-dung-opendatamap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kịch bản 1: Startup muốn dùng OpenDataMap
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kich-ban-2-developer-muon-tich-hop-vao-app-mobile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kịch bản 2: Developer muốn tích hợp vào app mobile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kich-ban-3-researcher-dung-cho-nghien-cuu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kịch bản 3: Researcher dùng cho nghiên cứu
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tuan-thu-gpl-30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tuân thủ GPL-3.0
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tuân thủ GPL-3.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#checklist-khi-fork-va-chinh-sua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checklist khi fork và chỉnh sửa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checklist-khi-phan-phoi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checklist khi phân phối
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mau-thong-bao-trong-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mẫu thông báo trong app
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cau-hoi-thuong-gap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Câu hỏi thường gặp
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Câu hỏi thường gặp">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#toi-co-the-dual-license-khong" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tôi có thể dual-license không?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#neu-toi-chi-dung-1-function-thoi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nếu tôi chỉ dùng 1 function thôi?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toi-co-the-ban-supporthosting-khong" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tôi có thể bán support/hosting không?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gpl-30-co-tuong-thich-voi-libraries-khac-khong" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GPL-3.0 có tương thích với libraries khác không?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tai-nguyen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tài nguyên
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tài nguyên">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chinh-thuc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chính thức
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phan-tich-so-sanh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phân tích &amp; So sánh
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cong-cu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Công cụ
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lien-he" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Liên hệ
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../open-data-license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Giấy phép Dữ liệu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Thanh điều hướng">
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Trang Chủ
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Chính sách &amp; Giấy phép
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="giay-phep-ma-nguon-gnu-gpl-v30">Giấy phép Mã nguồn - GNU GPL v3.0</h1>
+<h2 id="tong-quan">Tổng quan</h2>
+<p>Toàn bộ mã nguồn của dự án <strong>OpenDataMap</strong> được phát hành theo <strong>GNU General Public License phiên bản 3.0 (GPL-3.0)</strong>. Đây là giấy phép phần mềm tự do, copyleft đảm bảo quyền tự do chia sẻ và thay đổi phần mềm.</p>
+<h2 id="cac-thanh-phan-ap-dung-gpl-30">Các thành phần áp dụng GPL-3.0</h2>
+<table>
+<thead>
+<tr>
+<th>Thành phần</th>
+<th>Repository</th>
+<th>Mô tả</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Data Pipeline</strong></td>
+<td>OpenDataFitHou</td>
+<td>Python notebooks, RDF generation</td>
+</tr>
+<tr>
+<td><strong>Backend API</strong></td>
+<td>open_data_backend</td>
+<td>NestJS REST API, SPARQL integration</td>
+</tr>
+<tr>
+<td><strong>Frontend Web</strong></td>
+<td>open_data_map</td>
+<td>React app, Leaflet map</td>
+</tr>
+<tr>
+<td><strong>Documentation</strong></td>
+<td>MFitHou-Documents</td>
+<td>MkDocs documentation site</td>
+</tr>
+</tbody>
+</table>
+<h2 id="quyen-loi-cua-ban">Quyền lợi của bạn</h2>
+<p>Với GPL-3.0, bạn có đầy đủ các quyền sau:</p>
+<h3 id="tu-do-su-dung">✅ Tự do sử dụng</h3>
+<ul>
+<li>Chạy phần mềm cho <strong>bất kỳ mục đích nào</strong></li>
+<li>Không hạn chế về thương mại, giáo dục, hay cá nhân</li>
+<li>Không cần xin phép hay thanh toán</li>
+</ul>
+<h3 id="tu-do-nghien-cuu">✅ Tự do nghiên cứu</h3>
+<ul>
+<li>Truy cập <strong>toàn bộ mã nguồn</strong></li>
+<li>Nghiên cứu cách thức hoạt động</li>
+<li>Hiểu rõ thuật toán và logic</li>
+</ul>
+<h3 id="tu-do-chinh-sua">✅ Tự do chỉnh sửa</h3>
+<ul>
+<li>Sửa lỗi, cải thiện hiệu năng</li>
+<li>Thêm tính năng mới</li>
+<li>Điều chỉnh cho phù hợp nhu cầu</li>
+<li>Tạo phiên bản riêng (fork)</li>
+</ul>
+<h3 id="tu-do-phan-phoi">✅ Tự do phân phối</h3>
+<ul>
+<li>Chia sẻ phần mềm gốc</li>
+<li>Chia sẻ phiên bản đã chỉnh sửa</li>
+<li>Thu phí hoặc miễn phí</li>
+<li>Thương mại hóa sản phẩm</li>
+</ul>
+<h3 id="bao-ve-bang-sang-che">✅ Bảo vệ bằng sáng chế</h3>
+<ul>
+<li>Contributors cấp quyền sử dụng bằng sáng chế</li>
+<li>Không lo bị kiện về vi phạm patent</li>
+<li>An tâm phát triển và sử dụng</li>
+</ul>
+<h2 id="nghia-vu-cua-ban">Nghĩa vụ của bạn</h2>
+<p>Khi sử dụng, chỉnh sửa hoặc phân phối, bạn phải:</p>
+<h3 id="cong-khai-ma-nguon">❗ Công khai mã nguồn</h3>
+<p>Khi phân phối phần mềm (binary hoặc dịch vụ web), bạn phải:</p>
+<ul>
+<li>Cung cấp <strong>mã nguồn đầy đủ</strong></li>
+<li>Có thể truy cập dễ dàng (GitHub, download link)</li>
+<li>Bao gồm tất cả dependencies và build scripts</li>
+<li>Không được giấu hoặc obfuscate code</li>
+</ul>
+<h3 id="giu-nguyen-giay-phep">❗ Giữ nguyên giấy phép</h3>
+<p>Tất cả phiên bản phái sinh phải:</p>
+<ul>
+<li>Sử dụng <strong>cùng giấy phép GPL-3.0</strong></li>
+<li>Không được chuyển sang giấy phép khác</li>
+<li>Copyleft đảm bảo phần mềm luôn mở</li>
+</ul>
+<h3 id="thong-bao-ban-quyen">❗ Thông báo bản quyền</h3>
+<p>Trong mọi file mã nguồn, giữ nguyên:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Copyright (C) 2025 MFitHou</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1"># </span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># This program is free software: you can redistribute it and/or modify</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># it under the terms of the GNU General Public License as published by</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1"># the Free Software Foundation, either version 3 of the License, or</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1"># (at your option) any later version.</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1">#</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c1"># This program is distributed in the hope that it will be useful,</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="c1"># but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1"># MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="c1"># GNU General Public License for more details.</span>
+</span></code></pre></div>
+<h3 id="ghi-ro-thay-oi">❗ Ghi rõ thay đổi</h3>
+<p>Khi chỉnh sửa code, bạn phải:</p>
+<ul>
+<li>Ghi chú rõ ràng trong commit message</li>
+<li>Cập nhật CHANGELOG</li>
+<li>Đánh dấu modified files</li>
+<li>Không được claim là code gốc của bạn</li>
+</ul>
+<h3 id="bao-gom-license-file">❗ Bao gồm LICENSE file</h3>
+<ul>
+<li>Copy file <code>LICENSE</code> vào repository của bạn</li>
+<li>Link đến full license text</li>
+<li>Đảm bảo người dùng biết về GPL-3.0</li>
+</ul>
+<h2 id="tinh-huong-su-dung-cu-the">Tình huống sử dụng cụ thể</h2>
+<h3 id="uoc-phep">✅ Được phép</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><input id="__tabbed_1_4" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Sử dụng nội bộ</label><label for="__tabbed_1_2">Nghiên cứu học tập</label><label for="__tabbed_1_3">Phát triển dịch vụ</label><label for="__tabbed_1_4">Tích hợp vào sản phẩm</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>✅ Fork repository cho công ty
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>✅ Chỉnh sửa và deploy riêng
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>✅ Không cần công khai nếu KHÔNG phân phối
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>✅ Dùng cho production nội bộ
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>✅ Đọc code để học
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>✅ Dùng cho bài tập, đồ án
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>✅ Viết paper phân tích
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>✅ Trích dẫn trong luận văn
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>✅ Fork và thêm tính năng
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>✅ Deploy lên server riêng
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>✅ Cung cấp dịch vụ (SaaS)
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>✅ Thu phí từ người dùng
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>⚠️ PHẢI công khai mã nguồn đã chỉnh sửa
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>✅ Nhúng vào app của bạn
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>✅ Bán sản phẩm thương mại
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>✅ Phân phối cho khách hàng
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>⚠️ Toàn bộ sản phẩm phải dùng GPL-3.0
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>⚠️ Phải cung cấp source code
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="khong-uoc-phep">❌ Không được phép</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Vi phạm Share-Alike</label><label for="__tabbed_2_2">Vi phạm Attribution</label><label for="__tabbed_2_3">Kết hợp sai cách</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>❌ Fork nhưng đóng mã nguồn
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>❌ Phân phối dưới giấy phép proprietary
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>❌ Chỉ cung cấp binary mà không có source
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>❌ Thêm DRM hay protection vào code
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>❌ Xóa bỏ copyright notice
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>❌ Claim là code của bạn
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>❌ Không ghi rõ nguồn gốc
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>❌ Giấu đi việc dùng GPL code
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>❌ Kết hợp với proprietary library
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>❌ Link với closed-source code
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>❌ Nhúng vào app proprietary mà không GPL hóa toàn bộ
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>❌ Tạo "dual nature" app (phần mở, phần đóng)
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="gpl-30-vs-cac-giay-phep-khac">GPL-3.0 vs Các giấy phép khác</h2>
+<table>
+<thead>
+<tr>
+<th>Tiêu chí</th>
+<th>GPL-3.0</th>
+<th>MIT</th>
+<th>Apache 2.0</th>
+<th>AGPL-3.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Copyleft</strong></td>
+<td>✅ Mạnh</td>
+<td>❌ Không</td>
+<td>❌ Không</td>
+<td>✅ Rất mạnh</td>
+</tr>
+<tr>
+<td><strong>Thương mại</strong></td>
+<td>✅ Có</td>
+<td>✅ Có</td>
+<td>✅ Có</td>
+<td>✅ Có</td>
+</tr>
+<tr>
+<td><strong>Yêu cầu mã nguồn</strong></td>
+<td>✅ Khi phân phối</td>
+<td>❌ Không</td>
+<td>❌ Không</td>
+<td>✅ Kể cả SaaS</td>
+</tr>
+<tr>
+<td><strong>Patent grant</strong></td>
+<td>✅ Có</td>
+<td>❌ Không</td>
+<td>✅ Có</td>
+<td>✅ Có</td>
+</tr>
+<tr>
+<td><strong>Anti-Tivoization</strong></td>
+<td>✅ Có</td>
+<td>❌ Không</td>
+<td>❌ Không</td>
+<td>✅ Có</td>
+</tr>
+<tr>
+<td><strong>Tương thích</strong></td>
+<td>Hạn chế</td>
+<td>Rộng</td>
+<td>Rộng</td>
+<td>Hạn chế</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ac-iem-noi-bat-cua-gpl-30">Đặc điểm nổi bật của GPL-3.0</h2>
+<h3 id="1-copyleft-manh-me">1. Copyleft mạnh mẽ</h3>
+<pre class="mermaid"><code>graph LR
+    A[GPL Code] --&gt; B[Your Fork]
+    B --&gt; C[Modified Version]
+    C --&gt; D[Must be GPL-3.0]
+    D --&gt; E[Source Available]</code></pre>
+<h3 id="2-chong-tivoization">2. Chống Tivoization</h3>
+<p>GPL-3.0 ngăn chặn việc:
+- Khóa phần mềm trong hardware
+- Cấm người dùng chạy phiên bản chỉnh sửa
+- Sử dụng DRM để hạn chế quyền</p>
+<h3 id="3-bao-ve-bang-sang-che">3. Bảo vệ bằng sáng chế</h3>
+<ul>
+<li>Contributors không thể kiện về patent</li>
+<li>Tự động cấp patent license</li>
+<li>An toàn pháp lý cho developers</li>
+</ul>
+<h3 id="4-tuong-thich-voi-agpl">4. Tương thích với AGPL</h3>
+<ul>
+<li>Có thể kết hợp với AGPL-3.0</li>
+<li>Hữu ích cho web services</li>
+<li>Network copyleft</li>
+</ul>
+<h2 id="kich-ban-thuc-te">Kịch bản thực tế</h2>
+<h3 id="kich-ban-1-startup-muon-dung-opendatamap">Kịch bản 1: Startup muốn dùng OpenDataMap</h3>
+<p><strong>Câu hỏi:</strong> Công ty tôi muốn fork OpenDataMap, thêm tính năng và bán cho khách hàng. Có được không?</p>
+<p><strong>Trả lời:</strong></p>
+<p>✅ <strong>Được phép</strong>, nhưng:</p>
+<ol>
+<li>Toàn bộ sản phẩm phải dùng GPL-3.0</li>
+<li>Phải cung cấp source code cho khách hàng</li>
+<li>Khách hàng có quyền redistribute</li>
+<li>Không thể thêm điều khoản hạn chế hơn</li>
+</ol>
+<p>💡 <strong>Giải pháp thay thế:</strong></p>
+<ul>
+<li>Dùng API thay vì fork code → Không cần GPL</li>
+<li>Tạo plugin/extension riêng → Tùy cách tích hợp</li>
+<li>Cung cấp dịch vụ (hosting, support) → Không cần GPL code riêng</li>
+</ul>
+<h3 id="kich-ban-2-developer-muon-tich-hop-vao-app-mobile">Kịch bản 2: Developer muốn tích hợp vào app mobile</h3>
+<p><strong>Câu hỏi:</strong> Tôi muốn dùng Backend API code trong app iOS/Android. Phải làm sao?</p>
+<p><strong>Trả lời:</strong></p>
+<p>❌ <strong>Nếu nhúng trực tiếp code:</strong></p>
+<ul>
+<li>Toàn bộ app phải GPL-3.0</li>
+<li>Không thể publish lên App Store (xung đột ToS)</li>
+<li>Không phù hợp với mobile app</li>
+</ul>
+<p>✅ <strong>Nên làm:</strong></p>
+<ul>
+<li>Dùng REST API (không cần GPL)</li>
+<li>Deploy backend riêng</li>
+<li>App chỉ gọi API qua HTTP</li>
+</ul>
+<h3 id="kich-ban-3-researcher-dung-cho-nghien-cuu">Kịch bản 3: Researcher dùng cho nghiên cứu</h3>
+<p><strong>Câu hỏi:</strong> Tôi muốn dùng code để viết paper, có vấn đề gì không?</p>
+<p><strong>Trả lời:</strong></p>
+<p>✅ <strong>Hoàn toàn được:</strong></p>
+<ul>
+<li>Sử dụng tự do cho nghiên cứu</li>
+<li>Trích dẫn trong paper</li>
+<li>Không cần xin phép</li>
+<li>Có thể chỉnh sửa cho thí nghiệm</li>
+</ul>
+<p>❗ <strong>Lưu ý:</strong></p>
+<ul>
+<li>Nếu publish code chỉnh sửa → GPL-3.0</li>
+<li>Nếu chỉ viết paper → Không vấn đề</li>
+</ul>
+<h2 id="tuan-thu-gpl-30">Tuân thủ GPL-3.0</h2>
+<h3 id="checklist-khi-fork-va-chinh-sua">Checklist khi fork và chỉnh sửa</h3>
+<ul>
+<li>[ ] Giữ nguyên LICENSE file</li>
+<li>[ ] Giữ nguyên copyright headers</li>
+<li>[ ] Thêm copyright cho code mới của bạn</li>
+<li>[ ] Cập nhật CHANGELOG với thay đổi</li>
+<li>[ ] Commit message rõ ràng</li>
+<li>[ ] README ghi rõ là fork của OpenDataMap</li>
+</ul>
+<h3 id="checklist-khi-phan-phoi">Checklist khi phân phối</h3>
+<ul>
+<li>[ ] Cung cấp mã nguồn đầy đủ</li>
+<li>[ ] Include LICENSE và COPYING</li>
+<li>[ ] Hướng dẫn build từ source</li>
+<li>[ ] Link đến full GPL-3.0 text</li>
+<li>[ ] Thông báo về GPL-3.0 trong UI/docs</li>
+</ul>
+<h3 id="mau-thong-bao-trong-app">Mẫu thông báo trong app</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>This application is based on OpenDataMap
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>Copyright (C) 2025 MFitHou Team
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>Copyright (C) 2025 [Your Name]
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>This program is free software: you can redistribute it and/or modify
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>it under the terms of the GNU General Public License as published by
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>the Free Software Foundation, either version 3 of the License.
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>This program is distributed WITHOUT ANY WARRANTY.
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>Source code: https://github.com/[your-repo]
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>Original: https://github.com/MFitHou
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>License: https://www.gnu.org/licenses/gpl-3.0.html
+</span></code></pre></div>
+<h2 id="cau-hoi-thuong-gap">Câu hỏi thường gặp</h2>
+<h3 id="toi-co-the-dual-license-khong">Tôi có thể dual-license không?</h3>
+<p>Không, bạn không phải tác giả gốc. Chỉ MFitHou Team có quyền dual-license code của OpenDataMap.</p>
+<h3 id="neu-toi-chi-dung-1-function-thoi">Nếu tôi chỉ dùng 1 function thôi?</h3>
+<p>Vẫn phải tuân thủ GPL-3.0. Copyleft áp dụng cho mọi phần của code, dù nhỏ.</p>
+<h3 id="toi-co-the-ban-supporthosting-khong">Tôi có thể bán support/hosting không?</h3>
+<p>✅ Được! GPL không cấm thương mại hóa dịch vụ. Bạn có thể:
+- Bán support contracts
+- Bán hosting/managed service<br>
+- Bán training/consulting</p>
+<h3 id="gpl-30-co-tuong-thich-voi-libraries-khac-khong">GPL-3.0 có tương thích với libraries khác không?</h3>
+<ul>
+<li>✅ LGPL, MIT, BSD, Apache (hầu hết)</li>
+<li>❌ Proprietary, closed-source</li>
+<li>⚠️ Xem <a href="https://www.gnu.org/licenses/license-list.html">GPL-Compatible Licenses</a></li>
+</ul>
+<h2 id="tai-nguyen">Tài nguyên</h2>
+<h3 id="chinh-thuc">Chính thức</h3>
+<ul>
+<li>📄 <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">Full GPL-3.0 Text</a></li>
+<li>📚 <a href="https://www.gnu.org/licenses/gpl-faq.html">GPL FAQ</a></li>
+<li>🔍 <a href="https://www.gnu.org/licenses/quick-guide-gplv3.html">Quick Guide</a></li>
+</ul>
+<h3 id="phan-tich-so-sanh">Phân tích &amp; So sánh</h3>
+<ul>
+<li>💡 <a href="https://www.tldrlegal.com/license/gnu-general-public-license-v3-gpl-3">TLDRLegal GPL-3.0</a></li>
+<li>📊 <a href="https://choosealicense.com/licenses/gpl-3.0/">Choose a License</a></li>
+<li>🎓 <a href="https://www.gnu.org/philosophy/free-sw.html">Understanding GPL</a></li>
+</ul>
+<h3 id="cong-cu">Công cụ</h3>
+<ul>
+<li>✅ <a href="https://reuse.software/">REUSE Tool</a> - Check license compliance</li>
+<li>📋 <a href="https://spdx.org/licenses/">SPDX License List</a> - License identifiers</li>
+<li>🔧 <a href="https://www.fossology.org/">FOSSology</a> - License scanner</li>
+</ul>
+<h2 id="lien-he">Liên hệ</h2>
+<p>Câu hỏi về giấy phép hoặc cách tuân thủ?</p>
+<ul>
+<li>💬 <a href="https://github.com/MFitHou/MFitHou-Documents/discussions">GitHub Discussions</a></li>
+<li>🐛 <a href="https://github.com/MFitHou/MFitHou-Documents/issues">GitHub Issues</a></li>
+</ul>
+<hr>
+<div class="admonition info">
+<p class="admonition-title">Văn bản pháp lý</p>
+<p>File <a href="https://github.com/MFitHou/MFitHou-Documents/blob/main/LICENSE">LICENSE</a> trong repository là văn bản pháp lý chính thức. Tài liệu này chỉ là giải thích và hướng dẫn.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Không chắc chắn?</p>
+<p>Nếu không rõ về cách tuân thủ, hãy hỏi qua GitHub Issues. Chúng tôi sẵn sàng hỗ trợ!</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Trở lại mục lục
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Chân trang">
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Trước: Chính sách và Giấy phép">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Trước
+              </span>
+              <div class="md-ellipsis">
+                Chính sách và Giấy phép
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../open-data-license/" class="md-footer__link md-footer__link--next" aria-label="Sau: Giấy phép Dữ liệu">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Sau
+              </span>
+              <div class="md-ellipsis">
+                Giấy phép Dữ liệu
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2025 <a href="https://github.com/MFitHou" target="_blank" rel="noopener">MFitHou</a> - OLP PMNM 2025
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.footer", "navigation.tabs", "navigation.top", "navigation.instant", "navigation.instant.progress", "navigation.instant.prefetch", "navigation.expand", "navigation.path", "navigation.indexes", "toc.integrate", "content.tabs.link", "content.code.annotate", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "\u0110\u00e3 sao ch\u00e9p", "clipboard.copy": "Sao ch\u00e9p v\u00e0o b\u1ed9 nh\u1edb t\u1ea1m", "search.result.more.one": "1 t\u1eeb kh\u00e1c trong trang", "search.result.more.other": "# t\u1eeb kh\u00e1c trong trang", "search.result.none": "Kh\u00f4ng t\u00ecm th\u1ea5y t\u00e0i li\u1ec7u li\u00ean quan", "search.result.one": "1 t\u00e0i li\u1ec7u li\u00ean quan", "search.result.other": "# t\u00e0i li\u1ec7u li\u00ean quan", "search.result.placeholder": "Nh\u1eadp \u0111\u1ec3 b\u1eaft \u0111\u1ea7u t\u00ecm ki\u1ebfm", "search.result.term.missing": "Kh\u00f4ng", "select.version": "Ch\u1ecdn phi\u00ean b\u1ea3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

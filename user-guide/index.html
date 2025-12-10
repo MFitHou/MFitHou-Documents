@@ -1,0 +1,1910 @@
+<!DOCTYPE html><html lang="vi" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Tài liệu chính thức cho hệ sinh thái MFitHou - Nền tảng dữ liệu mở liên kết  phục vụ nghiên cứu và chuyển đổi số. ">
+      
+      
+        <meta name="author" content="MFitHou Team">
+      
+      
+        <link rel="canonical" href="https://mfithou.github.io/MFitHou-Documents/user-guide/">
+      
+      
+        <link rel="prev" href="../getting-started/installation/">
+      
+      
+        <link rel="next" href="../developer-guide/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Hướng dẫn sử dụng - MFitHou Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#huong-dan-su-dung" class="md-skip">
+          Bỏ qua
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Đầu trang">
+    <a href=".." title="MFitHou Documentation" class="md-header__button md-logo" aria-label="MFitHou Documentation" data-md-component="logo">
+      
+  <img src="../assets/images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MFitHou Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Hướng dẫn sử dụng
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Tìm kiếm" placeholder="Tìm kiếm" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Tìm kiếm">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Chia sẻ" aria-label="Chia sẻ" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Xoá" aria-label="Xoá" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/MFitHou" title="Xem mã nguồn" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    MFitHou
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Trang Chủ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../getting-started/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  OpenDataMap
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../getting-started/installation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Hướng dẫn cài đặt
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Hướng dẫn sử dụng
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../developer-guide/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Hướng dẫn phát triển
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../api-reference/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  API Reference
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../data-rdf/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Data &amp; RDF
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../policies/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Chính sách &amp; Giấy phép
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Thanh điều hướng" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="MFitHou Documentation" class="md-nav__button md-logo" aria-label="MFitHou Documentation" data-md-component="logo">
+      
+  <img src="../assets/images/logo.png" alt="logo">
+
+    </a>
+    MFitHou Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/MFitHou" title="Xem mã nguồn" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    MFitHou
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trang Chủ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../getting-started/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OpenDataMap
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    OpenDataMap
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Giới thiệu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tính năng
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/system-requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Yêu cầu hệ thống
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/architecture-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kiến trúc tổng quan
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hướng dẫn cài đặt
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hướng dẫn sử dụng
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hướng dẫn sử dụng
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Mục lục">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Mục lục
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gioi-thieu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Giới thiệu
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bat-au-su-dung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bắt đầu sử dụng
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bắt đầu sử dụng">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#truy-cap-he-thong" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Truy cập hệ thống
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#giao-dien-chinh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Giao diện chính
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cac-tinh-nang-chinh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Các tính năng chính
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Các tính năng chính">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-xem-vi-tri-hien-tai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Xem vị trí hiện tại
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-tim-kiem-poi-theo-loai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Tìm kiếm POI theo loại
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Tìm kiếm POI theo loại">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#su-dung-bo-loc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sử dụng bộ lọc
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ket-qua-hien-thi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kết quả hiển thị
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-xem-thong-tin-chi-tiet-poi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Xem thông tin chi tiết POI
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-tim-kiem-bang-van-ban" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Tìm kiếm bằng văn bản
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-su-dung-chatbot-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Sử dụng Chatbot AI
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Sử dụng Chatbot AI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mo-chatbot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mở Chatbot
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#at-cau-hoi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Đặt câu hỏi
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nhan-ket-qua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nhận kết quả
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-ieu-huong-ban-o" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Điều hướng bản đồ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Điều hướng bản đồ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phong-tothu-nho" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phóng to/Thu nhỏ
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#di-chuyen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Di chuyển
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chuyen-lop-ban-o" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chuyển lớp bản đồ
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-luu-va-chia-se" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Lưu và chia sẻ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Lưu và chia sẻ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#luu-vi-tri-yeu-thich" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lưu vị trí yêu thích
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chia-se-ia-iem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chia sẻ địa điểm
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tinh-nang-nang-cao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tính năng nâng cao
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tính năng nâng cao">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tim-kiem-theo-tuyen-uong" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tìm kiếm theo tuyến đường
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#so-sanh-poi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        So sánh POI
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xem-du-lieu-lich-su-iot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Xem dữ liệu lịch sử (IoT)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bao-cao-sai-sot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Báo cáo sai sót
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phim-tat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phím tắt
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cau-hoi-thuong-gap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Câu hỏi thường gặp
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Câu hỏi thường gặp">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-tai-sao-khong-thay-vi-tri-cua-toi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Tại sao không thấy vị trí của tôi?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-ket-qua-tim-kiem-khong-chinh-xac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Kết quả tìm kiếm không chính xác?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-lam-sao-e-tim-ia-iem-o-thanh-pho-khac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Làm sao để tìm địa điểm ở thành phố khác?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-chatbot-ai-khong-hoat-ong" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Chatbot AI không hoạt động?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-du-lieu-cap-nhat-bao-lau-mot-lan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Dữ liệu cập nhật bao lâu một lần?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-co-the-su-dung-offline-khong" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Có thể sử dụng offline không?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-lam-sao-e-ong-gop-du-lieu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Làm sao để đóng góp dữ liệu?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ho-tro-ky-thuat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hỗ trợ kỹ thuật
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developer-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hướng dẫn phát triển
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-rdf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data &amp; RDF
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../policies/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chính sách &amp; Giấy phép
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Chính sách &amp; Giấy phép
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../policies/source-code-license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Giấy phép Mã nguồn
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../policies/open-data-license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Giấy phép Dữ liệu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="huong-dan-su-dung">Hướng dẫn Sử dụng</h1>
+<p>Hướng dẫn chi tiết cách sử dụng nền tảng OpenDataMap để tra cứu thông tin địa điểm và dữ liệu mở.</p>
+<h2 id="gioi-thieu">Giới thiệu</h2>
+<p>OpenDataMap là nền tảng dữ liệu mở liên kết giúp bạn tìm kiếm và khám phá các điểm quan tâm (POI) xung quanh vị trí của bạn. Hệ thống cung cấp thông tin về:</p>
+<ul>
+<li>🏥 <strong>Bệnh viện &amp; Cơ sở y tế</strong></li>
+<li>🏧 <strong>ATM &amp; Ngân hàng</strong></li>
+<li>🚏 <strong>Trạm xe buýt</strong></li>
+<li>🚻 <strong>Nhà vệ sinh công cộng</strong></li>
+<li>🎮 <strong>Sân chơi trẻ em</strong></li>
+<li>🏫 <strong>Trường học</strong></li>
+<li>Và nhiều loại POI khác...</li>
+</ul>
+<h2 id="bat-au-su-dung">Bắt đầu sử dụng</h2>
+<h3 id="truy-cap-he-thong">Truy cập hệ thống</h3>
+<p><strong>URL:</strong> <a href="https://mfithou-map.example.com">https://mfithou-map.example.com</a></p>
+<div class="admonition tip">
+<p class="admonition-title">Trình duyệt được hỗ trợ</p>
+<ul>
+<li>Google Chrome 90+</li>
+<li>Mozilla Firefox 88+</li>
+<li>Microsoft Edge 90+</li>
+<li>Safari 14+</li>
+</ul>
+</div>
+<h3 id="giao-dien-chinh">Giao diện chính</h3>
+<p>Khi mở trang, bạn sẽ thấy:</p>
+<ol>
+<li><strong>Bản đồ</strong> - Hiển thị vị trí hiện tại và các POI xung quanh</li>
+<li><strong>Thanh tìm kiếm</strong> - Tìm kiếm địa điểm hoặc POI</li>
+<li><strong>Bộ lọc</strong> - Chọn loại POI muốn hiển thị</li>
+<li><strong>Bảng thông tin</strong> - Chi tiết về POI được chọn</li>
+<li><strong>Menu chatbot</strong> - Trợ lý AI hỗ trợ tìm kiếm</li>
+</ol>
+<h2 id="cac-tinh-nang-chinh">Các tính năng chính</h2>
+<h3 id="1-xem-vi-tri-hien-tai">1. Xem vị trí hiện tại</h3>
+<p><strong>Bước 1:</strong> Khi lần đầu truy cập, trình duyệt sẽ yêu cầu quyền truy cập vị trí.</p>
+<p><strong>Bước 2:</strong> Nhấn <strong>"Cho phép"</strong> để hệ thống xác định vị trí của bạn.</p>
+<p><strong>Bước 3:</strong> Bản đồ sẽ tự động zoom vào vị trí của bạn với marker màu xanh.</p>
+<div class="admonition warning">
+<p class="admonition-title">Lưu ý</p>
+<p>Nếu không cho phép truy cập vị trí, bản đồ sẽ hiển thị vị trí mặc định (Hà Nội).</p>
+</div>
+<h3 id="2-tim-kiem-poi-theo-loai">2. Tìm kiếm POI theo loại</h3>
+<h4 id="su-dung-bo-loc">Sử dụng bộ lọc</h4>
+<p><strong>Bước 1:</strong> Nhấn vào nút <strong>"Bộ lọc"</strong> ở góc trên bên phải.</p>
+<p><strong>Bước 2:</strong> Chọn loại POI muốn xem:</p>
+<ul>
+<li>☑️ Bệnh viện</li>
+<li>☑️ ATM</li>
+<li>☑️ Trạm xe buýt</li>
+<li>☑️ Nhà vệ sinh</li>
+<li>☑️ Sân chơi</li>
+<li>☑️ Trường học</li>
+</ul>
+<p><strong>Bước 3:</strong> Điều chỉnh <strong>"Bán kính tìm kiếm"</strong> (từ 1-10 km).</p>
+<p><strong>Bước 4:</strong> Nhấn <strong>"Áp dụng"</strong>.</p>
+<div class="admonition example">
+<p class="admonition-title">Ví dụ</p>
+<p>Muốn tìm bệnh viện trong bán kính 3km:</p>
+<ol>
+<li>Mở bộ lọc</li>
+<li>Chỉ tick ☑️ Bệnh viện</li>
+<li>Kéo slider bán kính về 3km</li>
+<li>Nhấn Áp dụng</li>
+</ol>
+<p>→ Bản đồ sẽ hiển thị tất cả bệnh viện trong vòng 3km.</p>
+</div>
+<h4 id="ket-qua-hien-thi">Kết quả hiển thị</h4>
+<ul>
+<li><strong>Markers trên bản đồ</strong>: Mỗi loại POI có icon riêng</li>
+<li>🏥 Màu đỏ: Bệnh viện</li>
+<li>🏧 Màu xanh dương: ATM</li>
+<li>🚏 Màu vàng: Trạm xe buýt</li>
+<li>🚻 Màu xám: Nhà vệ sinh</li>
+<li>
+<p>🎮 Màu xanh lá: Sân chơi</p>
+</li>
+<li>
+<p><strong>Danh sách bên trái</strong>: Liệt kê tất cả POI tìm được với:</p>
+</li>
+<li>Tên địa điểm</li>
+<li>Khoảng cách từ vị trí hiện tại</li>
+<li>Địa chỉ</li>
+</ul>
+<h3 id="3-xem-thong-tin-chi-tiet-poi">3. Xem thông tin chi tiết POI</h3>
+<p><strong>Bước 1:</strong> Nhấn vào marker trên bản đồ HOẶC chọn POI trong danh sách.</p>
+<p><strong>Bước 2:</strong> Popup/Panel hiển thị thông tin:</p>
+<ul>
+<li><strong>Tên</strong>: Tên đầy đủ của địa điểm</li>
+<li><strong>Loại</strong>: Phân loại (Hospital, ATM, Bus Stop,...)</li>
+<li><strong>Địa chỉ</strong>: Địa chỉ đầy đủ</li>
+<li><strong>Tọa độ</strong>: Vị trí GPS (latitude, longitude)</li>
+<li><strong>Khoảng cách</strong>: Khoảng cách từ vị trí bạn</li>
+<li><strong>Liên kết</strong>: Links đến OpenStreetMap, Wikidata (nếu có)</li>
+<li><strong>Thuộc tính bổ sung</strong>: Số điện thoại, giờ mở cửa, website (nếu có)</li>
+</ul>
+<p><strong>Bước 3:</strong> Sử dụng các nút hành động:</p>
+<ul>
+<li>🗺️ <strong>"Chỉ đường"</strong> - Mở Google Maps với đường đi</li>
+<li>📋 <strong>"Sao chép tọa độ"</strong> - Copy GPS coordinates</li>
+<li>🔗 <strong>"Chia sẻ"</strong> - Chia sẻ link địa điểm</li>
+</ul>
+<h3 id="4-tim-kiem-bang-van-ban">4. Tìm kiếm bằng văn bản</h3>
+<p><strong>Bước 1:</strong> Nhập từ khóa vào thanh tìm kiếm. Ví dụ:</p>
+<ul>
+<li>"Bệnh viện Bạch Mai"</li>
+<li>"ATM Vietcombank"</li>
+<li>"Trường tiểu học"</li>
+</ul>
+<p><strong>Bước 2:</strong> Nhấn <strong>Enter</strong> hoặc nút tìm kiếm 🔍.</p>
+<p><strong>Bước 3:</strong> Hệ thống sẽ:</p>
+<ul>
+<li>Tìm các POI khớp với từ khóa</li>
+<li>Hiển thị kết quả trên bản đồ</li>
+<li>Liệt kê trong danh sách với điểm tương đồng</li>
+</ul>
+<h3 id="5-su-dung-chatbot-ai">5. Sử dụng Chatbot AI</h3>
+<p>OpenDataMap tích hợp chatbot AI (Google Gemini) để hỗ trợ tìm kiếm thông minh.</p>
+<h4 id="mo-chatbot">Mở Chatbot</h4>
+<p><strong>Cách 1:</strong> Nhấn vào icon <strong>💬</strong> ở góc dưới bên phải.</p>
+<p><strong>Cách 2:</strong> Nhấn phím tắt <strong>Ctrl + K</strong> (Windows/Linux) hoặc <strong>Cmd + K</strong> (macOS).</p>
+<h4 id="at-cau-hoi">Đặt câu hỏi</h4>
+<p>Bạn có thể hỏi bằng ngôn ngữ tự nhiên:</p>
+<div class="admonition example">
+<p class="admonition-title">Ví dụ câu hỏi</p>
+<ul>
+<li>"Tìm bệnh viện gần nhất"</li>
+<li>"Có ATM nào trong bán kính 500m không?"</li>
+<li>"Trạm xe buýt số 7 ở đâu?"</li>
+<li>"Chỉ cho tôi sân chơi cho trẻ em quanh đây"</li>
+<li>"Nhà vệ sinh công cộng gần Hồ Hoàn Kiếm"</li>
+</ul>
+</div>
+<h4 id="nhan-ket-qua">Nhận kết quả</h4>
+<p>Chatbot sẽ:</p>
+<ol>
+<li><strong>Phân tích câu hỏi</strong> của bạn</li>
+<li><strong>Truy vấn dữ liệu</strong> từ hệ thống</li>
+<li><strong>Trả lời</strong> bằng ngôn ngữ tự nhiên</li>
+<li><strong>Hiển thị</strong> kết quả trên bản đồ (nếu có)</li>
+<li><strong>Đề xuất</strong> các POI liên quan</li>
+</ol>
+<h3 id="6-ieu-huong-ban-o">6. Điều hướng bản đồ</h3>
+<h4 id="phong-tothu-nho">Phóng to/Thu nhỏ</h4>
+<ul>
+<li><strong>Nút +/-</strong> trên bản đồ</li>
+<li><strong>Scroll chuột</strong></li>
+<li><strong>Pinch gesture</strong> trên màn hình cảm ứng</li>
+</ul>
+<h4 id="di-chuyen">Di chuyển</h4>
+<ul>
+<li><strong>Kéo thả</strong> bằng chuột/ngón tay</li>
+<li><strong>Nhấp đúp</strong> để zoom vào vị trí</li>
+</ul>
+<h4 id="chuyen-lop-ban-o">Chuyển lớp bản đồ</h4>
+<p>Nhấn vào nút <strong>"Layers"</strong> để chọn:</p>
+<ul>
+<li>🗺️ <strong>Streets</strong> - Bản đồ đường phố (mặc định)</li>
+<li>🛰️ <strong>Satellite</strong> - Hình ảnh vệ tinh</li>
+<li>🚴 <strong>Cycling</strong> - Dành cho xe đạp</li>
+<li>🚶 <strong>Pedestrian</strong> - Dành cho người đi bộ</li>
+</ul>
+<h3 id="7-luu-va-chia-se">7. Lưu và chia sẻ</h3>
+<h4 id="luu-vi-tri-yeu-thich">Lưu vị trí yêu thích</h4>
+<p><strong>Bước 1:</strong> Mở thông tin chi tiết của POI.</p>
+<p><strong>Bước 2:</strong> Nhấn nút <strong>⭐ "Lưu"</strong>.</p>
+<p><strong>Bước 3:</strong> POI sẽ được thêm vào danh sách <strong>"Yêu thích"</strong> trong menu.</p>
+<h4 id="chia-se-ia-iem">Chia sẻ địa điểm</h4>
+<p><strong>Cách 1: Share URL</strong></p>
+<ol>
+<li>Nhấn nút <strong>🔗 "Chia sẻ"</strong> trong thông tin POI</li>
+<li>Copy URL tự động (URL chứa tọa độ và loại POI)</li>
+<li>Gửi link cho người khác</li>
+</ol>
+<p><strong>Cách 2: Export dữ liệu</strong></p>
+<ol>
+<li>Nhấn menu <strong>"Xuất dữ liệu"</strong></li>
+<li>Chọn định dạng:</li>
+<li><strong>JSON</strong> - Dữ liệu thô</li>
+<li><strong>CSV</strong> - Bảng tính</li>
+<li><strong>KML</strong> - Cho Google Earth</li>
+<li>Download file</li>
+</ol>
+<h2 id="tinh-nang-nang-cao">Tính năng nâng cao</h2>
+<h3 id="tim-kiem-theo-tuyen-uong">Tìm kiếm theo tuyến đường</h3>
+<p><strong>Bước 1:</strong> Nhấn nút <strong>"Tuyến đường"</strong> trên bản đồ.</p>
+<p><strong>Bước 2:</strong> Nhập:</p>
+<ul>
+<li><strong>Điểm A</strong>: Địa điểm bắt đầu</li>
+<li><strong>Điểm B</strong>: Địa điểm kết thúc</li>
+</ul>
+<p><strong>Bước 3:</strong> Chọn <strong>"Tìm POI dọc đường"</strong>.</p>
+<p><strong>Bước 4:</strong> Chọn loại POI và bán kính lệch (ví dụ: 500m).</p>
+<p>→ Hệ thống sẽ hiển thị tất cả POI dọc theo tuyến đường trong bán kính cho phép.</p>
+<h3 id="so-sanh-poi">So sánh POI</h3>
+<p><strong>Bước 1:</strong> Tick chọn nhiều POI trong danh sách (giữ Ctrl/Cmd).</p>
+<p><strong>Bước 2:</strong> Nhấn nút <strong>"So sánh"</strong>.</p>
+<p><strong>Bước 3:</strong> Bảng so sánh hiển thị:</p>
+<table>
+<thead>
+<tr>
+<th>Tiêu chí</th>
+<th>POI 1</th>
+<th>POI 2</th>
+<th>POI 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Khoảng cách</td>
+<td>1.2 km</td>
+<td>0.8 km</td>
+<td>2.5 km</td>
+</tr>
+<tr>
+<td>Giờ mở cửa</td>
+<td>24/7</td>
+<td>8:00-20:00</td>
+<td>7:00-22:00</td>
+</tr>
+<tr>
+<td>Đánh giá</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+</tr>
+</tbody>
+</table>
+<h3 id="xem-du-lieu-lich-su-iot">Xem dữ liệu lịch sử (IoT)</h3>
+<p>Đối với POI có sensors (ví dụ: Trạm quan trắc môi trường):</p>
+<p><strong>Bước 1:</strong> Mở thông tin POI.</p>
+<p><strong>Bước 2:</strong> Tab <strong>"Dữ liệu IoT"</strong> hiển thị:</p>
+<ul>
+<li><strong>Biểu đồ thời gian thực</strong> (nhiệt độ, độ ẩm, PM2.5,...)</li>
+<li><strong>Lịch sử 7 ngày</strong></li>
+<li><strong>Xuất dữ liệu CSV</strong></li>
+</ul>
+<p><strong>Bước 3:</strong> Chọn khoảng thời gian và tải về.</p>
+<h3 id="bao-cao-sai-sot">Báo cáo sai sót</h3>
+<p>Nếu phát hiện thông tin sai:</p>
+<p><strong>Bước 1:</strong> Mở POI có vấn đề.</p>
+<p><strong>Bước 2:</strong> Nhấn <strong>"⚠️ Báo cáo sai sót"</strong>.</p>
+<p><strong>Bước 3:</strong> Điền form:</p>
+<ul>
+<li>Loại lỗi (Địa chỉ sai, Đã đóng cửa, Thông tin sai,...)</li>
+<li>Mô tả chi tiết</li>
+<li>Hình ảnh (tùy chọn)</li>
+</ul>
+<p><strong>Bước 4:</strong> Gửi báo cáo.</p>
+<p>→ Team sẽ xem xét và cập nhật trong vòng 48 giờ.</p>
+<h2 id="phim-tat">Phím tắt</h2>
+<table>
+<thead>
+<tr>
+<th>Phím</th>
+<th>Chức năng</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Ctrl/Cmd + K</code></td>
+<td>Mở Chatbot</td>
+</tr>
+<tr>
+<td><code>Ctrl/Cmd + F</code></td>
+<td>Focus thanh tìm kiếm</td>
+</tr>
+<tr>
+<td><code>Ctrl/Cmd + L</code></td>
+<td>Mở bộ lọc</td>
+</tr>
+<tr>
+<td><code>Ctrl/Cmd + M</code></td>
+<td>Chuyển đổi lớp bản đồ</td>
+</tr>
+<tr>
+<td><code>Esc</code></td>
+<td>Đóng popup/panel</td>
+</tr>
+<tr>
+<td><code>+</code> / <code>-</code></td>
+<td>Zoom in/out</td>
+</tr>
+<tr>
+<td><code>←</code> <code>→</code> <code>↑</code> <code>↓</code></td>
+<td>Di chuyển bản đồ</td>
+</tr>
+<tr>
+<td><code>Space</code></td>
+<td>Reset về vị trí hiện tại</td>
+</tr>
+</tbody>
+</table>
+<h2 id="cau-hoi-thuong-gap">Câu hỏi thường gặp</h2>
+<h3 id="1-tai-sao-khong-thay-vi-tri-cua-toi">1. Tại sao không thấy vị trí của tôi?</h3>
+<p><strong>Nguyên nhân:</strong></p>
+<ul>
+<li>Trình duyệt chưa được cấp quyền truy cập vị trí</li>
+<li>GPS bị tắt trên thiết bị</li>
+<li>Ở trong nhà, tín hiệu GPS yếu</li>
+</ul>
+<p><strong>Giải pháp:</strong></p>
+<ol>
+<li>Kiểm tra cài đặt quyền của trình duyệt</li>
+<li>Bật GPS/Location Services</li>
+<li>Ra ngoài trời hoặc gần cửa sổ</li>
+<li>Refresh trang</li>
+</ol>
+<h3 id="2-ket-qua-tim-kiem-khong-chinh-xac">2. Kết quả tìm kiếm không chính xác?</h3>
+<p><strong>Giải pháp:</strong></p>
+<ul>
+<li>Kiểm tra bán kính tìm kiếm (có thể quá nhỏ)</li>
+<li>Thử từ khóa khác</li>
+<li>Sử dụng Chatbot AI để tìm kiếm tự nhiên</li>
+<li>Báo cáo nếu dữ liệu sai</li>
+</ul>
+<h3 id="3-lam-sao-e-tim-ia-iem-o-thanh-pho-khac">3. Làm sao để tìm địa điểm ở thành phố khác?</h3>
+<p><strong>Cách 1:</strong> Nhập địa chỉ vào thanh tìm kiếm và nhấn Enter.</p>
+<p><strong>Cách 2:</strong> Click chuột phải trên bản đồ → <strong>"Tìm POI tại đây"</strong>.</p>
+<p><strong>Cách 3:</strong> Nhập tọa độ (latitude, longitude) vào thanh tìm kiếm.</p>
+<h3 id="4-chatbot-ai-khong-hoat-ong">4. Chatbot AI không hoạt động?</h3>
+<p><strong>Nguyên nhân:</strong> API key hết hạn hoặc quota vượt mức.</p>
+<p><strong>Giải pháp:</strong> Sử dụng tìm kiếm thông thường hoặc thử lại sau.</p>
+<h3 id="5-du-lieu-cap-nhat-bao-lau-mot-lan">5. Dữ liệu cập nhật bao lâu một lần?</h3>
+<ul>
+<li><strong>Dữ liệu POI</strong>: Cập nhật hàng tuần từ OpenStreetMap</li>
+<li><strong>Dữ liệu IoT</strong>: Real-time (cứ 5 phút/lần)</li>
+<li><strong>Metadata</strong>: Cập nhật từ Wikidata hàng tháng</li>
+</ul>
+<h3 id="6-co-the-su-dung-offline-khong">6. Có thể sử dụng offline không?</h3>
+<p>Hiện tại <strong>chưa hỗ trợ</strong> chế độ offline. Bạn cần kết nối Internet để:</p>
+<ul>
+<li>Tải bản đồ</li>
+<li>Truy vấn dữ liệu POI</li>
+<li>Sử dụng Chatbot AI</li>
+</ul>
+<h3 id="7-lam-sao-e-ong-gop-du-lieu">7. Làm sao để đóng góp dữ liệu?</h3>
+<p>Bạn có thể đóng góp bằng cách:</p>
+<ol>
+<li><strong>Cập nhật trên OpenStreetMap</strong> - Dữ liệu sẽ tự động đồng bộ</li>
+<li><strong>Báo cáo sai sót</strong> - Qua nút "Báo cáo" trong app</li>
+<li><strong>Gửi pull request</strong> - Nếu có kỹ năng kỹ thuật (xem <a href="../developer-guide/">Developer Guide</a>)</li>
+</ol>
+<h2 id="ho-tro-ky-thuat">Hỗ trợ kỹ thuật</h2>
+<p>Nếu gặp vấn đề, vui lòng:</p>
+<ul>
+<li>📧 Email: support@mfithou.com</li>
+<li>💬 <a href="https://github.com/MFitHou/MFitHou-Documents/issues">GitHub Issues</a></li>
+<li>📖 <a href="../faq/">FAQ</a></li>
+<li>📘 <a href="../developer-guide/">Developer Guide</a> (cho lỗi kỹ thuật)</li>
+</ul>
+<hr>
+<div class="admonition success">
+<p class="admonition-title">Bắt đầu khám phá!</p>
+<p>Bây giờ bạn đã sẵn sàng sử dụng OpenDataMap! 🎉</p>
+<p><strong>Bước tiếp theo:</strong></p>
+<ul>
+<li><a href="../getting-started/architecture-overview/">Xem kiến trúc hệ thống</a></li>
+<li><a href="../api-reference/">API Documentation</a> (cho developers)</li>
+<li><a href="../policies/">Chính sách &amp; Giấy phép</a></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Trở lại mục lục
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Chân trang">
+        
+          
+          <a href="../getting-started/installation/" class="md-footer__link md-footer__link--prev" aria-label="Trước: Hướng dẫn cài đặt">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Trước
+              </span>
+              <div class="md-ellipsis">
+                Hướng dẫn cài đặt
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../developer-guide/" class="md-footer__link md-footer__link--next" aria-label="Sau: Hướng dẫn phát triển">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Sau
+              </span>
+              <div class="md-ellipsis">
+                Hướng dẫn phát triển
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2025 <a href="https://github.com/MFitHou" target="_blank" rel="noopener">MFitHou</a> - OLP PMNM 2025
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.footer", "navigation.tabs", "navigation.top", "navigation.instant", "navigation.instant.progress", "navigation.instant.prefetch", "navigation.expand", "navigation.path", "navigation.indexes", "toc.integrate", "content.tabs.link", "content.code.annotate", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "\u0110\u00e3 sao ch\u00e9p", "clipboard.copy": "Sao ch\u00e9p v\u00e0o b\u1ed9 nh\u1edb t\u1ea1m", "search.result.more.one": "1 t\u1eeb kh\u00e1c trong trang", "search.result.more.other": "# t\u1eeb kh\u00e1c trong trang", "search.result.none": "Kh\u00f4ng t\u00ecm th\u1ea5y t\u00e0i li\u1ec7u li\u00ean quan", "search.result.one": "1 t\u00e0i li\u1ec7u li\u00ean quan", "search.result.other": "# t\u00e0i li\u1ec7u li\u00ean quan", "search.result.placeholder": "Nh\u1eadp \u0111\u1ec3 b\u1eaft \u0111\u1ea7u t\u00ecm ki\u1ebfm", "search.result.term.missing": "Kh\u00f4ng", "select.version": "Ch\u1ecdn phi\u00ean b\u1ea3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

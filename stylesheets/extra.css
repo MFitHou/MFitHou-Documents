@@ -78,3 +78,124 @@
   text-align: center;
   margin: 1.5rem 0;
 }
+
+/* Custom color override for #1976d2 */
+:root {
+  --md-primary-fg-color: #1976d2;
+  --md-primary-fg-color--light: #63a4ff;
+  --md-primary-fg-color--dark: #004ba0;
+  --md-primary-bg-color: #fff;
+  --md-primary-bg-color--light: #ffffffb3;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #1976d2;
+  --md-primary-fg-color--light: #63a4ff;
+  --md-primary-fg-color--dark: #004ba0;
+}
+
+/* Accent color */
+:root {
+  --md-accent-fg-color: #1976d2;
+  --md-accent-fg-color--transparent: #1976d21a;
+  --md-accent-bg-color: #fff;
+  --md-accent-bg-color--light: #ffffffb3;
+}
+
+/* Hero section styling */
+.md-content h2:first-of-type {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 2rem 0;
+  color: var(--md-primary-fg-color);
+}
+
+/* Data source table styling */
+.md-typeset table td:last-child {
+  text-align: center;
+}
+
+/* Team cards */
+.grid.cards a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.grid.cards a:hover {
+  color: var(--md-primary-fg-color);
+}
+
+/* Badge styling */
+.md-content img[alt*="shields.io"] {
+  display: inline-block;
+  margin: 0 0.25rem;
+}
+
+/* Demo grid styling - 2 images per row inside tabs */
+.demo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.demo-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.4rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.demo-grid img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive: Stack on mobile */
+@media screen and (max-width: 768px) {
+  .demo-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Responsive: 3 columns on large screens if needed */
+@media screen and (min-width: 1200px) {
+  .demo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Goal table styling - Only for introduction page with 3 columns */
+.md-typeset table:has(td:first-child:only-child) td:first-child,
+.md-typeset table td:first-child:has(.twemoji) {
+  width: 3rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.md-typeset table:has(td:first-child .twemoji) td:nth-child(2) {
+  width: 25%;
+  font-weight: 600;
+}
+
+/* Reset default table styling */
+.md-typeset table td:first-child {
+  width: auto;
+  text-align: left;
+  font-size: 0.8rem;
+}
+
+/* Tech Stack tabs table styling */
+.tabbed-content table td,
+.tabbed-content table th {
+  font-size: 0.85rem !important;
+}
+
+.tabbed-content table td:first-child {
+  width: auto !important;
+  font-size: 0.85rem !important;
+  font-weight: normal !important;
+}
