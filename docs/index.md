@@ -54,27 +54,15 @@ MFitHou là hệ sinh thái dữ liệu mở liên kết (Linked Open Data) ph�
 ---
 
 
-=== "Tìm kiếm địa điểm"
+=== "Bản đồ tiện ích"
     
     <div class="demo-grid" markdown>
     
-    ![Search Demo 1](assets/images/demo-search-1.png)
+    ![Search Demo 1](assets/images/1.png)
     
-    ![Search Demo 2](assets/images/demo-search-2.png)
+    ![Search Demo 2](assets/images/2.png)
     
-    ![Search Demo 3](assets/images/demo-search-3.png)
-    
-    </div>
-
-=== "Bản đồ tương tác"
-    
-    <div class="demo-grid" markdown>
-    
-    ![Map Demo 1](assets/images/demo-map-1.png)
-    
-    ![Map Demo 2](assets/images/demo-map-2.png)
-    
-    ![Map Demo 3](assets/images/demo-map-3.png)
+    ![Search Demo 3](assets/images/3.png)
     
     </div>
 
@@ -82,14 +70,33 @@ MFitHou là hệ sinh thái dữ liệu mở liên kết (Linked Open Data) ph�
     
     <div class="demo-grid" markdown>
     
-    ![Chatbot Demo 1](assets/images/demo-chatbot-1.png)
+    ![Chatbot Demo 1](assets/images/4.png)
     
-    ![Chatbot Demo 2](assets/images/demo-chatbot-2.png)
+    ![Chatbot Demo 2](assets/images/5.png)
     
-    ![Chatbot Demo 3](assets/images/demo-chatbot-3.png)
     
     </div>
 
+=== "Truy vấn dữ liệu"
+    
+    <div class="demo-grid" markdown>
+    
+    ![Chatbot Demo 1](assets/images/6.png)
+    
+    ![Chatbot Demo 2](assets/images/8.png)
+    
+    </div>
+
+=== "Quản trị"
+    
+    <div class="demo-grid" markdown>
+    
+    ![Chatbot Demo 1](assets/images/10.png)
+    
+    ![Chatbot Demo 2](assets/images/11.png)
+    ![Chatbot Demo 2](assets/images/12.png)
+    
+    </div>
 
 | Nguồn dữ liệu | Mô tả | Độ tin cậy |
 |---------------|-------|------------|
