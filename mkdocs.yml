@@ -51,23 +51,11 @@ theme:
     text: Roboto
     code: Roboto Mono
   
-  # Color Palette
+  # Color Palette - Light mode only
   palette:
-    # Dark mode
-    - scheme: slate
-      toggle:
-        icon: material/weather-sunny
-        name: Dark mode
-      primary: blue
-      accent: blue
-    
-    # Light mode
-    - scheme: default
-      toggle:
-        icon: material/weather-night
-        name: Light mode
-      primary: blue
-      accent: blue
+    scheme: default
+    primary: blue
+    accent: blue
   
   # Features
   features:
@@ -112,7 +100,11 @@ markdown_extensions:
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
 
@@ -134,287 +126,45 @@ nav:
   # ============================================================================
   # Getting Started
   # ============================================================================
-  - Bắt đầu:
+  - OpenDataMap:
     - getting-started/index.md
     - Giới thiệu: getting-started/introduction.md
     - Tính năng: getting-started/features.md
-    - Quick Start: getting-started/quick-start.md
     - Yêu cầu hệ thống: getting-started/system-requirements.md
     - Kiến trúc tổng quan: getting-started/architecture-overview.md
-    - Cài đặt nhanh: getting-started/quick-start.md
-    - Khái niệm cơ bản: getting-started/concepts.md
-  
-  # ============================================================================
-  # System Architecture
-  # ============================================================================
-  - Kiến trúc hệ thống:
-    - architecture/index.md
-    - Tổng quan: architecture/system-overview.md
-    - Component Diagram: architecture/component-diagram.md
-    - Data Flow: architecture/data-flow.md
-    - Technology Stack: architecture/technology-stack.md
-    - Infrastructure: architecture/infrastructure.md
-    - Deployment: architecture/deployment.md
-    - Bảo mật: architecture/security.md
-    - Khả năng mở rộng: architecture/scalability.md
-  
-  # ============================================================================
-  # Components
-  # ============================================================================
-  - Components:
-    - components/index.md
-    
-    # Data Pipeline (OpenDataFitHou)
-    - Data Pipeline:
-      - components/data-pipeline/index.md
-      - Overview: components/data-pipeline/overview.md
-      - Thu thập dữ liệu: components/data-pipeline/data-collection.md
-      - Chuyển đổi dữ liệu: components/data-pipeline/data-transformation.md
-      - RDF Generation: components/data-pipeline/rdf-generation.md
-      - Upload Fuseki: components/data-pipeline/fuseki-upload.md
-      - Jupyter Notebooks: components/data-pipeline/notebooks-guide.md
-    
-    # Backend API (open_data_backend)
-    - Backend API:
-      - components/backend/index.md
-      - Overview: components/backend/overview.md
-      - Architecture: components/backend/architecture.md
-      - Modules: components/backend/modules.md
-      - Services: components/backend/services.md
-      - Controllers: components/backend/controllers.md
-      - Fuseki Integration: components/backend/fuseki-integration.md
-      - API Endpoints: components/backend/api-endpoints.md
-      - Error Handling: components/backend/error-handling.md
-      - Configuration: components/backend/configuration.md
-    
-    # Frontend Web (open_data_map)
-    - Frontend Web:
-      - components/frontend/index.md
-      - Overview: components/frontend/overview.md
-      - Architecture: components/frontend/architecture.md
-      - Pages & Routes: components/frontend/pages.md
-      - Components: components/frontend/components.md
-      - Custom Hooks: components/frontend/hooks.md
-      - State Management: components/frontend/state-management.md
-      - API Integration: components/frontend/api-integration.md
-      - Map Integration: components/frontend/map-integration.md
-      - Styling: components/frontend/styling.md
   
   # ============================================================================
   # Installation Guides
   # ============================================================================
-  - Hướng dẫn cài đặt:
-    - installation/index.md
-    - Yêu cầu ban đầu: installation/prerequisites.md
-    
-    # Data Pipeline Installation
-    - Data Pipeline:
-      - installation/data-pipeline/index.md
-      - Python Setup: installation/data-pipeline/python-setup.md
-      - Dependencies: installation/data-pipeline/dependencies.md
-      - Configuration: installation/data-pipeline/configuration.md
-      - Running: installation/data-pipeline/running.md
-    
-    # Backend API Installation
-    - Backend API:
-      - installation/backend/index.md
-      - Node.js Setup: installation/backend/nodejs-setup.md
-      - Dependencies: installation/backend/dependencies.md
-      - Environment Variables: installation/backend/environment-variables.md
-      - Running Server: installation/backend/running-server.md
-    
-    # Frontend Installation
-    - Frontend Web:
-      - installation/frontend/index.md
-      - Node.js Setup: installation/frontend/nodejs-setup.md
-      - Dependencies: installation/frontend/dependencies.md
-      - Environment Variables: installation/frontend/environment-variables.md
-      - Development Server: installation/frontend/development-server.md
-    
-    # Fuseki Installation
-    - Apache Jena Fuseki:
-      - installation/fuseki/index.md
-      - Download & Install: installation/fuseki/download-install.md
-      - Dataset Creation: installation/fuseki/dataset-creation.md
-      - Configuration: installation/fuseki/configuration.md
-      - Data Upload: installation/fuseki/data-upload.md
-    
-    # Docker Deployment
-    - Docker Deployment:
-      - installation/docker/index.md
-      - Docker Compose: installation/docker/docker-compose.md
-      - Configuration: installation/docker/configuration.md
-      - Production: installation/docker/production-deployment.md
+  - Hướng dẫn cài đặt: getting-started/installation.md
   
   # ============================================================================
   # User Guide
   # ============================================================================
-  - Hướng dẫn sử dụng:
-    - user-guide/index.md
-    - Tìm kiếm địa điểm: user-guide/searching-locations.md
-    - Xem bản đồ: user-guide/viewing-map.md
-    - Dịch vụ lân cận: user-guide/nearby-services.md
-    - SPARQL Queries: user-guide/sparql-queries.md
-    - Xuất dữ liệu: user-guide/data-export.md
-    - Chatbot AI: user-guide/chatbot.md
-    - Xử lý lỗi: user-guide/troubleshooting.md
-    - FAQ: user-guide/faq.md
+  - Hướng dẫn sử dụng: user-guide/index.md
   
   # ============================================================================
   # Developer Guide
   # ============================================================================
-  - Hướng dẫn phát triển:
-    - developer-guide/index.md
-    - Cấu trúc dự án: developer-guide/project-structure.md
-    - Development Setup: developer-guide/development-setup.md
-    
-    # Coding Standards
-    - Coding Standards:
-      - developer-guide/coding-standards/index.md
-      - TypeScript: developer-guide/coding-standards/typescript.md
-      - Python: developer-guide/coding-standards/python.md
-      - Naming Conventions: developer-guide/coding-standards/naming-conventions.md
-      - Commit Messages: developer-guide/coding-standards/commit-messages.md
-    
-    # Testing
-    - Testing:
-      - developer-guide/testing/index.md
-      - Unit Tests: developer-guide/testing/unit-tests.md
-      - Integration Tests: developer-guide/testing/integration-tests.md
-      - E2E Tests: developer-guide/testing/e2e-tests.md
-    
-    # Git Workflow
-    - Git Workflow:
-      - developer-guide/git-workflow/index.md
-      - Branching Strategy: developer-guide/git-workflow/branching-strategy.md
-      - Pull Requests: developer-guide/git-workflow/pull-requests.md
-      - Code Review: developer-guide/git-workflow/code-review.md
-    
-    - Contributing: developer-guide/contributing.md
-    - Code Style: developer-guide/code-style.md
-    - Testing: developer-guide/testing.md
+  - Hướng dẫn phát triển: developer-guide/index.md
   
   # ============================================================================
   # API Reference
   # ============================================================================
-  - API Reference:
-    - api-reference/index.md
-    
-    # REST API
-    - REST API:
-      - api-reference/rest-api/index.md
-      - Overview: api-reference/rest-api/overview.md
-      - Authentication: api-reference/rest-api/authentication.md
-      
-      # Endpoints
-      - Endpoints:
-        - api-reference/rest-api/endpoints/index.md
-        - ATMs Nearby: api-reference/rest-api/endpoints/atms-nearby.md
-        - Hospitals Nearby: api-reference/rest-api/endpoints/hospitals-nearby.md
-        - Toilets Nearby: api-reference/rest-api/endpoints/toilets-nearby.md
-        - Bus Stops Nearby: api-reference/rest-api/endpoints/bus-stops-nearby.md
-        - Playgrounds Nearby: api-reference/rest-api/endpoints/playgrounds-nearby.md
-        - Custom Query: api-reference/rest-api/endpoints/custom-query.md
-      
-      - Request/Response: api-reference/rest-api/request-response.md
-      - Error Codes: api-reference/rest-api/error-codes.md
-      - Examples: api-reference/rest-api/examples.md
-    
-    # SPARQL
-    - SPARQL:
-      - api-reference/sparql/index.md
-      - Overview: api-reference/sparql/overview.md
-      - Common Queries: api-reference/sparql/common-queries.md
-      - Query Cookbook: api-reference/sparql/query-cookbook.md
-      - Best Practices: api-reference/sparql/best-practices.md
+  - API Reference: api-reference/index.md
   
   # ============================================================================
   # Data & RDF
   # ============================================================================
-  - Data & RDF:
-    - data-rdf/index.md
-    
-    # Ontology
-    - Ontology:
-      - data-rdf/ontology/index.md
-      - Schema Overview: data-rdf/ontology/schema-overview.md
-      - Classes: data-rdf/ontology/classes.md
-      - Properties: data-rdf/ontology/properties.md
-      - Relationships: data-rdf/ontology/relationships.md
-    
-    # Data Sources
-    - Data Sources:
-      - data-rdf/data-sources/index.md
-      - OpenStreetMap: data-rdf/data-sources/openstreetmap.md
-      - Wikidata: data-rdf/data-sources/wikidata.md
-      - Data Quality: data-rdf/data-sources/data-quality.md
-    
-    # POI Types
-    - POI Types:
-      - data-rdf/poi-types/index.md
-      - ATMs: data-rdf/poi-types/atms.md
-      - Hospitals: data-rdf/poi-types/hospitals.md
-      - Bus Stops: data-rdf/poi-types/bus-stops.md
-      - Toilets: data-rdf/poi-types/toilets.md
-      - Playgrounds: data-rdf/poi-types/playgrounds.md
-      - Schools: data-rdf/poi-types/schools.md
-    
-    # RDF Structure
-    - RDF Structure:
-      - data-rdf/rdf-structure/index.md
-      - Prefixes: data-rdf/rdf-structure/prefixes.md
-      - Triple Patterns: data-rdf/rdf-structure/triple-patterns.md
-      - Example Data: data-rdf/rdf-structure/example-data.md
-  
-  # ============================================================================
-  # CI/CD & Infrastructure
-  # ============================================================================
-  - CI/CD & Infrastructure:
-    - infrastructure/index.md
-    
-    # GitHub Workflows
-    - GitHub Workflows:
-      - infrastructure/github-workflows/index.md
-      - Backend CI: infrastructure/github-workflows/backend-ci.md
-      - Frontend CI: infrastructure/github-workflows/frontend-ci.md
-      - Data Validation: infrastructure/github-workflows/data-pipeline-validation.md
-      - Docs Deployment: infrastructure/github-workflows/docs-deployment.md
-    
-    # Templates
-    - Templates:
-      - infrastructure/templates/index.md
-      - Issue Templates: infrastructure/templates/issue-templates.md
-      - PR Templates: infrastructure/templates/pr-templates.md
-    
-    - Release Management: infrastructure/release-management.md
+  - Data & RDF: data-rdf/index.md
   
   # ============================================================================
   # Policies
   # ============================================================================
-  - Chính sách:
+  - Chính sách & Giấy phép:
     - policies/index.md
-    - License (GPL v3): policies/license.md
-    - Code of Conduct: policies/code-of-conduct.md
-    - Security Policy: policies/security.md
-    - Privacy Policy: policies/privacy.md
-    - Contributing: policies/contributing.md
-  
-  # ============================================================================
-  # Releases
-  # ============================================================================
-  - Releases:
-    - releases/index.md
-    - Changelog: releases/changelog.md
-    - Version History: releases/version-history.md
-    - Migration Guides: 
-      - releases/migration-guides/index.md
-    - Roadmap: releases/roadmap.md
-  
-  # ============================================================================
-  # FAQ & Support
-  # ============================================================================
-  - FAQ: faq.md
-  - Support: support.md
+    - Giấy phép Mã nguồn: policies/source-code-license.md
+    - Giấy phép Dữ liệu: policies/open-data-license.md
 
 watch:
   - overrides

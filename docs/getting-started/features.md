@@ -195,6 +195,5 @@ LIMIT 10
 ---
 
 !!! tip "Explore More"
-    - [Quick Start Guide](quick-start.md) - Chạy thử hệ thống
     - [API Reference](../api-reference/index.md) - Chi tiết API
     - [User Guide](../user-guide/index.md) - Hướng dẫn sử dụng

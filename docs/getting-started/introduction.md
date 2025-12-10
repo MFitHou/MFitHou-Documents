@@ -1,46 +1,17 @@
-# Giới thiệu về MFitHou
+# Giới thiệu về OpenDataMap
 
-## MFitHou là gì?
+## Open Data Map là gì?
 
-**MFitHou** (Mở FitHou) là hệ sinh thái **Linked Open Data (LOD)** phục vụ nghiên cứu và chuyển đổi số, được phát triển cho cuộc thi **Phần mềm Nguồn mở - Olympic Tin học sinh viên (OLP) 2025**.
-
-Hệ thống cung cấp nền tảng dữ liệu mở liên kết về các điểm quan tâm (POI - Points of Interest) tại Việt Nam, tuân thủ chuẩn **W3C Semantic Web** (RDF, SPARQL, Linked Data).
+**OpenDataMap** là hệ sinh thái **Linked Open Data (LOD)** phục vụ nghiên cứu và chuyển đổi số. Hệ thống cung cấp nền tảng dữ liệu mở liên kết về các điểm quan tâm (POI - Points of Interest) tại Việt Nam, tuân thủ chuẩn **W3C Semantic Web** (RDF, SPARQL, Linked Data) và **NGSI-LD** của ETSI.
 
 ## Mục tiêu dự án
 
-### 1. Chuyển đổi số dữ liệu địa lý
-
-Chuyển đổi dữ liệu địa lý từ **OpenStreetMap** sang định dạng **RDF/Turtle**, tạo nền tảng dữ liệu mở liên kết có thể:
-
-- ✅ Truy vấn bằng SPARQL
-- ✅ Liên kết với Wikidata, DBpedia
-- ✅ Tích hợp với Semantic Web ecosystem
-
-### 2. Cung cấp REST API
-
-Xây dựng **RESTful API** với **NestJS** để:
-
-- ✅ Tìm kiếm POI lân cận (ATMs, hospitals, toilets, etc.)
-- ✅ Tích hợp Apache Jena Fuseki triplestore
-- ✅ Hỗ trợ custom SPARQL queries
-
-### 3. Interactive Web Application
-
-Phát triển **React web app** với:
-
-- ✅ Interactive Leaflet map
-- ✅ POI search & nearby services
-- ✅ AI chatbot (Google Gemini)
-- ✅ Data export (XML, RDF, JSON)
-
-### 4. Phần mềm nguồn mở
-
-Tuân thủ tinh thần **Open Source**:
-
-- ✅ GNU GPL v3.0 license
-- ✅ Public GitHub repositories
-- ✅ Comprehensive documentation
-- ✅ Community contributions welcome
+| | Mục tiêu | Mô tả |
+|---|---------|-------|
+| :material-database-arrow-right: | **Chuyển đổi số dữ liệu** | Chuyển đổi dữ liệu địa lý từ OpenStreetMap sang RDF/Turtle tuân thủ chuẩn NGSI-LD, hỗ trợ SPARQL và liên kết với Semantic Web |
+| :material-api: | **REST API** | API tìm kiếm POI lân cận với tích hợp Apache Jena Fuseki và custom SPARQL queries, tương thích NGSI-LD |
+| :material-web: | **Web Application** | React app với Leaflet map, AI chatbot (Gemini), và xuất dữ liệu đa định dạng (JSON-LD, RDF/Turtle, XML) |
+| :material-open-source-initiative: | **Open Source** | GNU GPL v3.0 license, public repositories, tài liệu đầy đủ, mở cho cộng đồng |
 
 ## Đặt vấn đề
 
@@ -48,70 +19,44 @@ Tuân thủ tinh thần **Open Source**:
 
 **OpenStreetMap** cung cấp dữ liệu địa lý phong phú nhưng:
 
-❌ Định dạng GeoJSON không tối ưu cho semantic search  
-❌ Khó liên kết với knowledge graphs khác  
-❌ Không hỗ trợ truy vấn SPARQL  
-❌ Thiếu standardization cho POI schema  
+- Định dạng GeoJSON không tối ưu cho semantic search  
+- Khó liên kết với knowledge graphs khác  
+- Không hỗ trợ truy vấn SPARQL  
+- Thiếu standardization cho POI schema  
 
 ### Nhu cầu Linked Open Data
 
 Semantic Web cần:
 
-✅ **Standardized schema** - Ontology rõ ràng  
-✅ **Linked Data** - Liên kết với Wikidata, DBpedia  
-✅ **SPARQL endpoint** - Query language mạnh mẽ  
-✅ **RESTful API** - Dễ tích hợp với ứng dụng  
+- **Standardized schema** - Ontology rõ ràng  
+- **Linked Data** - Liên kết với Wikidata, DBpedia  
+- **SPARQL endpoint** - Query language mạnh mẽ  
+- **RESTful API** - Dễ tích hợp với ứng dụng  
 
 ## Giải pháp
 
-MFitHou giải quyết bằng kiến trúc **3-tier**:
-
-```mermaid
-graph TB
-    subgraph Data Layer
-        OSM[OpenStreetMap<br/>Overpass API]
-        WD[Wikidata<br/>SPARQL Endpoint]
-    end
-    
-    subgraph Processing Layer
-        DP[Data Pipeline<br/>Python + Jupyter]
-        FUSEKI[Apache Jena Fuseki<br/>RDF Triplestore]
-    end
-    
-    subgraph Application Layer
-        BE[Backend API<br/>NestJS + TypeScript]
-        FE[Frontend Web<br/>React + Leaflet]
-    end
-    
-    OSM -->|GeoJSON| DP
-    WD -->|RDF| DP
-    DP -->|RDF/Turtle| FUSEKI
-    FUSEKI <-->|SPARQL| BE
-    BE <-->|REST API| FE
-    
-    style FUSEKI fill:#4CAF50
-    style BE fill:#2196F3
-    style FE fill:#FF9800
-```
+### Kiến trúc
+ ![Architecture](../assets/images/architecture.png)
 
 ### Data Pipeline (Python)
 
-- Thu thập dữ liệu từ OSM Overpass API
-- Chuyển đổi GeoJSON → RDF/Turtle
-- Upload lên Apache Jena Fuseki
+- Thu thập dữ liệu từ các nguồn API và giả lập dữ liệu IoT
+- Chuyển đổi GeoJSON → RDF/Turtle tuân thủ chuẩn NGSI-LD
+- Lưu trữ dữ liệu IoT time-series vào InfluxDB
+- Tải dữ liệu RDF lên Apache Jena Fuseki triplestore
 
 ### Backend API (NestJS)
 
-- REST API endpoints cho nearby search
-- SPARQL integration với Fuseki
-- CORS support cho frontend
+- REST API endpoints cho tìm kiếm dịch vụ tiện ích công cộng
+- Tích hợp SPARQL với Fuseki và InfluxDB cho dữ liệu IoT
+- Hỗ trợ CORS cho frontend
 
 ### Frontend Web (React)
 
-- Interactive Leaflet map
-- Search locations (OSM + Wikidata)
-- Nearby services visualization
-- AI chatbot support
+- Bản đồ tương tác với Leaflet
+- Tìm kiếm địa điểm (OSM + Wikidata)
+- Hiển thị dịch vụ lân cận
+- Hỗ trợ chatbot AI
 
 ## Tech Stack
 
@@ -148,41 +93,10 @@ graph TB
     | GitHub Actions | Latest | CI/CD |
     | MkDocs Material | Latest | Documentation |
 
-## Timeline
-
-```mermaid
-gantt
-    title Lộ trình phát triển MFitHou
-    dateFormat  YYYY-MM-DD
-    section Research
-    Research & Planning       :done, 2024-09-01, 30d
-    section Data Pipeline
-    OSM Data Collection      :done, 2024-10-01, 15d
-    RDF Conversion           :done, 2024-10-15, 15d
-    section Backend
-    NestJS Setup             :done, 2024-11-01, 10d
-    Fuseki Integration       :done, 2024-11-10, 10d
-    API Development          :done, 2024-11-20, 15d
-    section Frontend
-    React Setup              :done, 2024-12-01, 10d
-    Map Integration          :done, 2024-12-10, 10d
-    UI/UX Polish             :done, 2024-12-20, 15d
-    section Documentation
-    Technical Docs           :active, 2025-01-01, 30d
-    section Deployment
-    Production Release       :2025-02-01, 15d
-```
-
-## Team
-
-| Role | Responsibilities |
-|------|------------------|
-| **Project Lead** | Overall coordination, architecture design |
-| **Backend Developer** | NestJS API, Fuseki integration |
-| **Frontend Developer** | React app, Leaflet map, UI/UX |
-| **Data Engineer** | Data pipeline, RDF conversion, SPARQL |
 
 ## License
+
+### Giấy phép Mã nguồn
 
 **GNU General Public License v3.0**
 
@@ -195,7 +109,20 @@ gantt
 - ❗ State changes
 - ❗ Same license
 
-Xem chi tiết: [LICENSE](../policies/license.md)
+[:octicons-arrow-right-24: Chi tiết Giấy phép Mã nguồn](../policies/source-code-license.md)
+
+### Giấy phép Dữ liệu
+
+**Open Data License (ODbL, CC0, CC BY 4.0)**
+
+- 📍 OpenStreetMap data - **ODbL v1.0**
+- 🌐 Wikidata - **CC0 1.0 Universal**
+- 🌍 OpenAQ - **CC BY 4.0**
+- 🔄 RDF chuyển đổi - **ODbL v1.0**
+
+[:octicons-arrow-right-24: Chi tiết Giấy phép Dữ liệu](../policies/open-data-license.md)
+
+[:material-file-document-multiple: Xem tổng quan tất cả Giấy phép](../policies/index.md)
 
 ---
 

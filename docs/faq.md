@@ -31,9 +31,7 @@ Toàn bộ hệ thống được phát hành dưới giấy phép **GNU GPL v3.0
 - **Storage**: 2GB free space
 - **OS**: Windows, macOS, Linux
 
-### Làm sao để cài đặt toàn bộ hệ thống?
 
-Xem hướng dẫn chi tiết tại [Quick Start Guide](getting-started/quick-start.md).
 
 ### Apache Jena Fuseki cài đặt như thế nào?
 

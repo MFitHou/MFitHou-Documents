@@ -1,101 +1,216 @@
-# Chào mừng đến với MFitHou Documentation
+![MFitHou Banner](assets/images/banner.jpg)
 
-![MFitHou Banner](assets/images/banner.png)
+---
 
-## Giới thiệu
+## MFitHou - Smart Search. Natural Interaction.
 
-**MFitHou** là hệ sinh thái dữ liệu mở liên kết (Linked Open Data) phục vụ nghiên cứu và chuyển đổi số, được phát triển cho cuộc thi **Phần mềm Nguồn mở - Olympic Tin học sinh viên (OLP) 2025**.
 
-Hệ thống bao gồm:
+MFitHou là hệ sinh thái dữ liệu mở liên kết (Linked Open Data) phục vụ nghiên cứu và chuyển đổi số, được phát triển cho cuộc thi **Phần mềm Nguồn mở - Olympic Tin học sinh viên (OLP) 2025**.
 
-- 🐍 **Data Pipeline** - Thu thập và chuyển đổi dữ liệu từ OpenStreetMap sang RDF
-- ⚡ **Backend API** - NestJS REST API với tích hợp Apache Jena Fuseki
-- 🗺️ **Frontend Web** - React web application với Leaflet map
-- 📚 **Documentation** - Tài liệu đầy đủ cho toàn bộ hệ thống
+---
 
-## Quick Links
+## :material-star-four-points: Tính năng chính
 
 <div class="grid cards" markdown>
 
--   :material-rocket-launch:{ .lg .middle } __Bắt đầu nhanh__
+-   :material-map-search:{ .lg .middle } **Tìm kiếm địa điểm thông minh**
 
     ---
 
-    Cài đặt và chạy hệ thống trong 10 phút
+    Tìm kiếm ATM, bệnh viện, trạm xe buýt, nhà vệ sinh công cộng, sân chơi và nhiều dịch vụ tiện ích công cộng khác.
 
-    [:octicons-arrow-right-24: Quick Start](getting-started/quick-start.md)
-
--   :material-chart-timeline-variant:{ .lg .middle } __Kiến trúc hệ thống__
+-   :material-robot:{ .lg .middle } **AI Chatbot**
 
     ---
 
-    Tìm hiểu kiến trúc và luồng dữ liệu
+    Trợ lý ảo hỗ trợ tìm kiếm và trả lời câu hỏi bằng ngôn ngữ tự nhiên, được hỗ trợ bởi Google Gemini
 
-    [:octicons-arrow-right-24: System Architecture](architecture/system-overview.md)
-
--   :material-api:{ .lg .middle } __API Reference__
+-   :material-map-marker-radius:{ .lg .middle } **Bản đồ tương tác**
 
     ---
 
-    Tài liệu REST API và SPARQL endpoints
+    Hiển thị địa điểm trên bản đồ Leaflet với markers, popup thông tin chi tiết và tính năng định vị
 
-    [:octicons-arrow-right-24: API Docs](api-reference/index.md)
-
--   :material-code-braces:{ .lg .middle } __Developer Guide__
+-   :material-database-search:{ .lg .middle } **SPARQL Query**
 
     ---
 
-    Hướng dẫn phát triển và đóng góp code
+    Truy vấn dữ liệu RDF với Apache Jena Fuseki, hỗ trợ custom queries linh hoạt
 
-    [:octicons-arrow-right-24: Dev Guide](developer-guide/index.md)
+-   :material-download:{ .lg .middle } **Xuất dữ liệu**
+
+    ---
+
+    Xuất kết quả tìm kiếm sang nhiều định dạng: XML, RDF/Turtle, JSON. Có cung cấp các API theo chuẩn NGSI-LD
+
+-   :material-weather-cloudy:{ .lg .middle } **Thông tin thời tiết & môi trường**
+
+    ---
+
+    Hiển thị dữ liệu thời tiết và chất lượng không khí, môi trường theo thời gian thực
 
 </div>
 
-## Tính năng chính
+---
 
-- ✅ **Linked Open Data** - Dữ liệu RDF/Turtle tuân thủ chuẩn W3C
-- ✅ **SPARQL Integration** - Query dữ liệu với Apache Jena Fuseki
-- ✅ **RESTful API** - 7 endpoints cho nearby search
-- ✅ **Interactive Map** - Leaflet-based map với POI markers
-- ✅ **AI Chatbot** - Gemini-powered chatbot hỗ trợ người dùng
-- ✅ **Data Export** - Xuất dữ liệu sang XML, RDF, JSON
 
-## Tech Stack
+=== "Tìm kiếm địa điểm"
+    
+    <div class="demo-grid" markdown>
+    
+    ![Search Demo 1](assets/images/demo-search-1.png)
+    
+    ![Search Demo 2](assets/images/demo-search-2.png)
+    
+    ![Search Demo 3](assets/images/demo-search-3.png)
+    
+    </div>
 
-=== "Data Pipeline"
-    - Python 3.9+
-    - Jupyter Notebook
-    - RDFLib
-    - Requests
+=== "Bản đồ tương tác"
+    
+    <div class="demo-grid" markdown>
+    
+    ![Map Demo 1](assets/images/demo-map-1.png)
+    
+    ![Map Demo 2](assets/images/demo-map-2.png)
+    
+    ![Map Demo 3](assets/images/demo-map-3.png)
+    
+    </div>
+
+=== "AI Chatbot"
+    
+    <div class="demo-grid" markdown>
+    
+    ![Chatbot Demo 1](assets/images/demo-chatbot-1.png)
+    
+    ![Chatbot Demo 2](assets/images/demo-chatbot-2.png)
+    
+    ![Chatbot Demo 3](assets/images/demo-chatbot-3.png)
+    
+    </div>
+
+
+| Nguồn dữ liệu | Mô tả | Độ tin cậy |
+|---------------|-------|------------|
+| **[OpenStreetMap](https://www.openstreetmap.org/)** | Dữ liệu bản đồ nền, vị trí các tiện ích (bãi đỗ xe, đường, POI) qua Overpass API | Cao (cộng đồng cập nhật) |
+| **[OpenWeather](https://openweathermap.org/)** | Dữ liệu thời tiết thực tế | Cao (phụ thuộc vào coverage từng khu vực) |
+| **[OpenAQ](https://openaq.org/)** | Dữ liệu chất lượng không khí toàn cầu | Trung bình (phụ thuộc coverage, fallback mô phỏng nếu thiếu) |
+| **Dữ liệu IoT giả lập** | Dữ liệu mô phỏng: giao thông, tiếng ồn, ngập lụt dựa trên logic, thời gian, thời tiết thực tế | [:octicons-arrow-right-24: Xem kịch bản](data-rdf/data-sources/iot-simulation.md) |
+
+!!! info "Tần suất cập nhật"
+    - **OpenStreetMap**: Cập nhật từ community
+    - **OpenWeather**: Real-time API (cập nhật mỗi 5 phút)
+    - **OpenAQ**: Cập nhật mỗi 5 phút
+    - **IoT**: Giả lập real-time (mỗi 5 phút)
+
+---
+
+## :material-tools: Công nghệ sử dụng
 
 === "Backend"
-    - NestJS 11
-    - TypeScript 5.7
-    - Node.js 18+
-    - Apache Jena Fuseki
+    - **NestJS 11** - Framework Node.js
+    - **TypeScript 5.7** - Type-safe JavaScript
+    - **Apache Jena Fuseki** - SPARQL server
+    - **Swagger/OpenAPI** - API documentation
 
 === "Frontend"
-    - React 19
-    - TypeScript 5.8
-    - Vite 7
-    - Leaflet 1.9
-    - Material-UI 6
+    - **React 19** - UI library
+    - **Vite 7** - Build tool & dev server
+    - **Leaflet 1.9** - Interactive maps
+    - **Material-UI 6** - Component library
 
-## Repositories
+=== "Data Pipeline"
+    - **Python 3.9+** - Data processing
+    - **Jupyter Notebook** - Interactive development
+    - **RDFLib** - RDF/Turtle generation
+    - **Requests** - HTTP client
 
-| Repository | Mô tả | Tech Stack |
-|------------|-------|------------|
-| [OpenDataFitHou](https://github.com/MFitHou/OpenDataFitHou) | Data Pipeline - Thu thập & chuyển đổi dữ liệu | Python, Jupyter |
-| [open_data_backend](https://github.com/MFitHou/open_data_backend) | Backend API - NestJS REST API | NestJS, TypeScript |
-| [open_data_map](https://github.com/MFitHou/open_data_map) | Frontend Web - React Map App | React, Vite, Leaflet |
-| [.github](https://github.com/MFitHou/.github) | Templates & Policies | Markdown |
+=== "DevOps"
+    - **Docker** - Containerization
+    - **GitHub Actions** - CI/CD
+    - **Nginx** - Web server
+    - **PM2** - Process manager
 
-## License
+---
 
-Toàn bộ hệ thống được phát hành dưới giấy phép **GNU General Public License v3.0**.
+
+!!! tip "Hướng dẫn chi tiết"
+    [:octicons-arrow-right-24: Xem hướng dẫn cài đặt đầy đủ](installation/index.md)
+
+---
+
+## :material-account-group: Đội ngũ phát triển
+
+<div class="grid cards" markdown>
+
+-   :material-github: **[@honganhss](https://github.com/honganhss)**
+    
+    ---
+    
+    Team Lead & Backend Developer
+
+-   :material-github: **[@VuHoangAnh2110](https://github.com/VuHoangAnh2110)**
+    
+    ---
+    
+    Frontend Developer & UI/UX Designer
+
+-   :material-github: **[@VNgKhanh04](https://github.com/VNgKhanh04)**
+    
+    ---
+    
+    Data Engineer & DevOps
+
+</div>
+
+---
+
+## :material-link-variant: Quick Links
+
+<div class="grid cards" markdown>
+
+-   :material-book-open-variant:{ .lg .middle } **Tài liệu**
+
+    ---
+
+    Hướng dẫn sử dụng và phát triển đầy đủ
+
+    [:octicons-arrow-right-24: Xem tài liệu](getting-started/index.md)
+
+-   :material-github:{ .lg .middle } **Repositories**
+
+    ---
+
+    Source code trên GitHub
+
+    [:octicons-arrow-right-24: GitHub Organization](https://github.com/MFitHou)
+
+-   :material-api:{ .lg .middle } **API Reference**
+
+    ---
+
+    REST API và SPARQL endpoints
+
+    [:octicons-arrow-right-24: API Docs](api-reference/index.md)
+
+-   :material-license:{ .lg .middle } **License**
+
+    ---
+
+    GNU General Public License v3.0
+
+    [:octicons-arrow-right-24: Xem license](policies/license.md)
+
+</div>
 
 ---
 
 <div class="text-center" markdown>
-**Developed with ❤️ by MFitHou Team for OLP PMNM 2025**
+
+**Developed with :material-heart: by MFitHou Team for OLP PMNM 2025**
+
+[![GitHub stars](https://img.shields.io/github/stars/MFitHou?style=social)](https://github.com/MFitHou)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
 </div>

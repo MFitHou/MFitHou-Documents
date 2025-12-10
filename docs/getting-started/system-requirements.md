@@ -185,6 +185,87 @@ Tài liệu này mô tả các yêu cầu phần cứng và phần mềm để c
     sudo yum install java-11-openjdk
     ```
 
+#### 5. InfluxDB (for IoT Time-Series Data)
+
+**Version:** 2.x hoặc cao hơn
+
+=== "Windows"
+    ```powershell
+    # Download InfluxDB từ trang chính thức
+    https://portal.influxdata.com/downloads/
+    
+    # Hoặc dùng Chocolatey
+    choco install influxdb2
+    
+    # Kiểm tra
+    influx version  # 2.0.0+
+    
+    # Chạy InfluxDB
+    influxd
+    ```
+
+=== "macOS"
+    ```bash
+    # Dùng Homebrew
+    brew install influxdb
+    
+    # Kiểm tra
+    influx version
+    
+    # Chạy dưới dạng service
+    brew services start influxdb
+    
+    # Hoặc chạy trực tiếp
+    influxd
+    ```
+
+=== "Linux"
+    ```bash
+    # Ubuntu/Debian
+    wget -q https://repos.influxdata.com/influxdata-archive_compat.key
+    echo '393e8779c89ac8d958f81f942f9ad7fb82a25e133faddaf92e15b16e6ac9ce4c influxdata-archive_compat.key' | sha256sum -c && cat influxdata-archive_compat.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/influxdata-archive_compat.gpg > /dev/null
+    echo 'deb [signed-by=/etc/apt/trusted.gpg.d/influxdata-archive_compat.gpg] https://repos.influxdata.com/debian stable main' | sudo tee /etc/apt/sources.list.d/influxdata.list
+    
+    sudo apt-get update && sudo apt-get install influxdb2
+    
+    # Khởi động service
+    sudo systemctl start influxdb
+    sudo systemctl enable influxdb
+    
+    # Kiểm tra status
+    sudo systemctl status influxdb
+    ```
+
+**Cấu hình InfluxDB:**
+
+```bash
+# Setup InfluxDB qua CLI
+influx setup
+
+# Hoặc truy cập Web UI
+http://localhost:8086
+
+# Thông tin cần cấu hình:
+# - Username: admin (hoặc tùy chọn)
+# - Password: (chọn mật khẩu mạnh)
+# - Organization: MFitHou
+# - Bucket: iot-data
+# - Retention: 30 days (hoặc tùy nhu cầu)
+```
+
+**Tạo Token:**
+
+```bash
+# Tạo token với quyền đọc/ghi
+influx auth create \
+  --org MFitHou \
+  --read-buckets \
+  --write-buckets \
+  --description "IoT Data Token"
+
+# Lưu token vào .env file
+```
+
 ## Browser Requirements
 
 ### Supported Browsers (Frontend)
@@ -212,6 +293,7 @@ Tài liệu này mô tả các yêu cầu phần cứng và phần mềm để c
 | Service | Default Port | Protocol | Description |
 |---------|--------------|----------|-------------|
 | **Fuseki** | 3030 | HTTP | SPARQL endpoint |
+| **InfluxDB** | 8086 | HTTP | Time-series database |
 | **Backend** | 3000 | HTTP | REST API |
 | **Frontend** | 5173 | HTTP | Dev server (Vite) |
 | **Frontend (Prod)** | 80/443 | HTTP/HTTPS | Production |
@@ -223,6 +305,7 @@ Mở các ports sau nếu chạy production:
 ```powershell
 # Windows Firewall
 netsh advfirewall firewall add rule name="Fuseki" dir=in action=allow protocol=TCP localport=3030
+netsh advfirewall firewall add rule name="InfluxDB" dir=in action=allow protocol=TCP localport=8086
 netsh advfirewall firewall add rule name="Backend" dir=in action=allow protocol=TCP localport=3000
 netsh advfirewall firewall add rule name="Frontend" dir=in action=allow protocol=TCP localport=80
 ```
@@ -235,7 +318,7 @@ Các dịch vụ bên ngoài cần truy cập:
 |---------|-----|---------|
 | **OpenStreetMap** | `https://overpass-api.de` | Data collection |
 | **Wikidata** | `https://www.wikidata.org` | Location search |
-| **Google Gemini** | `https://generativelanguage.googleapis.com` | AI chatbot |
+| **Google Gemini** | `https://generativelanguage.googleapis.com/...` | AI chatbot |
 | **NPM Registry** | `https://registry.npmjs.org` | Package installation |
 | **PyPI** | `https://pypi.org` | Python packages |
 
@@ -268,8 +351,17 @@ Các dịch vụ bên ngoài cần truy cập:
 ### Backend (.env)
 
 ```bash
+# Fuseki Configuration
 FUSEKI_SERVER_URL=http://localhost:3030
 FUSEKI_DATASET=mfithou
+
+# InfluxDB Configuration
+INFLUXDB_URL=http://localhost:8086
+INFLUXDB_TOKEN=your_influxdb_token_here
+INFLUXDB_ORG=MFitHou
+INFLUXDB_BUCKET=iot-data
+
+# Server Configuration
 PORT=3000
 NODE_ENV=development
 ```
@@ -283,44 +375,19 @@ VITE_MAP_CENTER_LAT=21.0285
 VITE_MAP_CENTER_LONG=105.8542
 ```
 
-## Storage Requirements
+### Data Pipeline (.env)
 
-### Development
+```bash
+# InfluxDB Configuration for Python
+INFLUXDB_URL=http://localhost:8086
+INFLUXDB_TOKEN=your_influxdb_token_here
+INFLUXDB_ORG=MFitHou
+INFLUXDB_BUCKET=iot-data
 
-| Component | Storage |
-|-----------|---------|
-| **Node modules (Backend)** | ~200 MB |
-| **Node modules (Frontend)** | ~300 MB |
-| **Python venv** | ~100 MB |
-| **Fuseki binaries** | ~150 MB |
-| **Sample data** | ~50 MB |
-| **Total** | ~800 MB |
-
-### Production
-
-| Component | Storage |
-|-----------|---------|
-| **Application code** | ~50 MB |
-| **Fuseki triplestore** | 5-50 GB (depends on data) |
-| **Logs** | 1-10 GB |
-| **Backups** | 10-100 GB |
-| **Total** | ~15-200 GB |
-
-## Checklist
-
-Trước khi bắt đầu installation, kiểm tra:
-
-- [ ] Node.js 18+ installed
-- [ ] Python 3.9+ installed
-- [ ] Java 11+ installed (for Fuseki)
-- [ ] Git installed
-- [ ] At least 4 GB RAM available
-- [ ] At least 5 GB free disk space
-- [ ] Internet connection stable
-- [ ] Ports 3000, 3030, 5173 available
-- [ ] Modern browser (Chrome 90+, Firefox 88+)
+# Fuseki Configuration
+FUSEKI_SERVER_URL=http://localhost:3030
+FUSEKI_DATASET=mfithou
+```
 
 ---
 
-!!! success "System Ready"
-    Nếu đã đáp ứng tất cả yêu cầu, tiếp tục với [Quick Start](quick-start.md)!
