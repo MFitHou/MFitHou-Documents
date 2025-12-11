@@ -12,7 +12,7 @@ OpenDataMap cung cấp 3 loại API tuân thủ chuẩn NGSI-LD:
 
 **Base URL:** `http://localhost:3000` (development)
 
-**Production URL:** `https://api.mfithou.com`
+**Production URL:** `https://opendatamap.hou.edu.vn/api`
 
 **NGSI-LD Version:** v1.6.1
 
@@ -460,67 +460,8 @@ SELECT ?poi ?name ?wikidataId WHERE {
 **GET Request:**
 
 ```bash
-curl -G "http://localhost:3030/mfithou/query" \
+curl -G "GET /query" \
   --data-urlencode "query=SELECT * WHERE { ?s ?p ?o } LIMIT 10"
-```
-
-**POST Request:**
-
-```bash
-curl -X POST "http://localhost:3030/mfithou/query" \
-  -H "Content-Type: application/sparql-query" \
-  -d "SELECT * WHERE { ?s ?p ?o } LIMIT 10"
-```
-
-### Query với Python
-
-```python
-from SPARQLWrapper import SPARQLWrapper, JSON
-
-sparql = SPARQLWrapper("http://localhost:3030/mfithou/query")
-sparql.setQuery("""
-    PREFIX schema: <http://schema.org/>
-    SELECT ?hospital ?name WHERE {
-        ?hospital a schema:Hospital ;
-                  schema:name ?name .
-    }
-    LIMIT 10
-""")
-sparql.setReturnFormat(JSON)
-
-results = sparql.query().convert()
-for result in results["results"]["bindings"]:
-    print(result["name"]["value"])
-```
-
-### Query với JavaScript
-
-```javascript
-async function querySparql(query) {
-  const response = await fetch('http://localhost:3030/mfithou/query', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/sparql-query',
-      'Accept': 'application/sparql-results+json'
-    },
-    body: query
-  });
-  
-  return response.json();
-}
-
-// Usage
-const query = `
-  PREFIX schema: <http://schema.org/>
-  SELECT ?hospital ?name WHERE {
-    ?hospital a schema:Hospital ;
-              schema:name ?name .
-  }
-  LIMIT 10
-`;
-
-const results = await querySparql(query);
-console.log(results);
 ```
 
 ## InfluxDB API (IoT Data)
@@ -540,7 +481,7 @@ console.log(results);
 **Example:**
 
 ```bash
-curl "http://localhost:3000/influxdb/sensor-data?sensorId=temp_sensor_01&start=-24h"
+curl "GET /influxdb/sensor-data?sensorId=temp_sensor_01&start=-24h"
 ```
 
 **Response:**
@@ -663,38 +604,6 @@ SELECT ?poi ?name WHERE {
 ORDER BY ?name
 LIMIT 50
 OFFSET 0
-```
-
-## Testing APIs
-
-### Postman Collection
-
-Import collection từ: [postman_collection.json](https://github.com/MFitHou/open_data_backend/blob/main/postman_collection.json)
-
-### cURL Examples
-
-**Tất cả endpoints:**
-
-```bash
-# Hospitals
-curl "http://localhost:3000/fuseki/hospitals-nearby?lat=21.0285&long=105.8542"
-
-# ATMs
-curl "http://localhost:3000/fuseki/atms-nearby?lat=21.0285&long=105.8542"
-
-# Bus Stops
-curl "http://localhost:3000/fuseki/bus-stops-nearby?lat=21.0285&long=105.8542"
-
-# Toilets
-curl "http://localhost:3000/fuseki/toilets-nearby?lat=21.0285&long=105.8542"
-
-# Playgrounds
-curl "http://localhost:3000/fuseki/playgrounds-nearby?lat=21.0285&long=105.8542"
-
-# Custom Query
-curl -X POST http://localhost:3000/fuseki/query \
-  -H "Content-Type: application/json" \
-  -d '{"query":"SELECT * WHERE { ?s ?p ?o } LIMIT 5"}'
 ```
 
 ## Resources
