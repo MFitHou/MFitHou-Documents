@@ -353,9 +353,9 @@ from(bucket: "opendatafithou")
 
 ### Direct SPARQL Endpoint
 
-**Endpoint:** `http://localhost:3030/mfithou/query`
+**Endpoint:** `GET /query`
 
-**Method:** GET hoặc POST
+**Method:** GET
 
 ### Prefixes
 
